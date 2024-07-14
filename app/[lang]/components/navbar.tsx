@@ -3,8 +3,10 @@ export default function Navbar() {
         <nav className="fixed z-20 flex w-full items-center justify-between bg-white px-28 py-6 shadow">
             <div className="flex items-center gap-4">
                 <a className="mr-16 text-xl text-primary" href="#top">
-                    Ashley Lizbeth
+                    Digital Obelisk
                 </a>
+
+                <div></div>
                 <a className="transition hover:text-primary" href="#services">
                     Services
                 </a>

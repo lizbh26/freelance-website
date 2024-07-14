@@ -1,13 +1,11 @@
 'use client';
 
-import Navbar from './navbar';
-import Banner from './banner';
+import Banner from './components/banner';
 
-export default function Home() {
+export default function Home({ lang }: { lang: string }) {
     return (
-        <main className="scroll-smooth bg-white text-black">
-            <Navbar />
-            <Banner />
+        <div>
+            <Banner lang={lang} />
             <section
                 id="services"
                 className="mx-20 flex scroll-mt-24 flex-col items-center justify-center rounded-lg bg-background py-10">
@@ -81,6 +79,6 @@ export default function Home() {
             <footer className="mt-5 flex items-center justify-center bg-neutral-100 py-3">
                 <p>Ashley Lizbeth &copy;2024</p>
             </footer>
-        </main>
+        </div>
     );
 }
