@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/feather-icons": "^4.29.4",
     "accept-language": "^3.0.18",
     "feather-icons": "^4.29.2",
     "i18next": "^23.12.1",
