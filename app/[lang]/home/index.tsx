@@ -1,6 +1,7 @@
 import Header from './components/header';
 import AboutUs from './components/about-us';
 import Services from './components/services';
+import Testimonials from './components/testimonials';
 
 export default function Home({ lang }: { lang: string }) {
     return (
@@ -8,31 +9,18 @@ export default function Home({ lang }: { lang: string }) {
             <Header lang={lang} />
             <AboutUs />
             <Services />
-            <section id="portfolio" className="mt-10 scroll-mt-24">
-                <div className="mb-4">
+            <section id="portfolio" className="mb-16 mt-10 scroll-mt-24">
+                <div>
                     <h2 className="text-center text-4xl font-bold">
                         Simple. Elegant. Efficient.
                     </h2>
                     <p className="text-center">See it to believe it</p>
                 </div>
             </section>
-            <section id="testimonials" className="scroll-mt-24">
-                <div className="h-0 w-0 border-b-[80px] border-l-[50vw] border-r-[50vw] border-solid border-transparent border-b-background"></div>
-                <div className="bg-background pt-10">
-                    <div className="py-10">
-                        <h2 className="text-center text-4xl font-bold">
-                            Not convinced yet?
-                        </h2>
-                        <p className="text-center">
-                            You can check out what our past clients have to say about us:
-                        </p>
-                    </div>
-                    <div className="h-0 w-0 border-b-[80px] border-l-[50vw] border-r-[50vw] border-solid border-transparent border-b-white"></div>
-                </div>
-            </section>
+            <Testimonials />
             <section
                 id="get-a-quote"
-                className="flex scroll-mt-24 flex-col items-center justify-center">
+                className="mt-10 flex scroll-mt-24 flex-col items-center justify-center">
                 <h2 className="text-center text-4xl font-bold">
                     Let&apos;s get started!
                 </h2>
