@@ -17,7 +17,7 @@ export default function Services() {
             <div className="mb-1 mt-5 flex items-center justify-center gap-2">
                 <p>Interested?</p>
                 <button className="rounded bg-primary p-2 px-4 text-white">
-                    Let's begin working!
+                    {"Let's begin working!"}
                 </button>
             </div>
             <p>
