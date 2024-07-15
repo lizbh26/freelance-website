@@ -12,18 +12,11 @@ export default function ChangingAdjectives() {
         if (inViewport) setCanBegin(true);
     }, [inViewport]);
 
-    const adjectives = [
-        'builders',
-        'designers',
-        'programmers',
-        'your solution.',
-    ];
     return (
         <span id="changing-adjective" className="inline-block" ref={spanRef}>
             {canBegin ? (
                 <Typewriter
                     onInit={(typewriter) => {
-                        console.log('HI!');
                         typewriter
                             .typeString('builders')
                             .pauseFor(500)
@@ -37,7 +30,6 @@ export default function ChangingAdjectives() {
                             .typeString('your solution.')
                             .start();
                     }}
-                    options={{ autoStart: true }}
                 />
             ) : (
                 <></>
