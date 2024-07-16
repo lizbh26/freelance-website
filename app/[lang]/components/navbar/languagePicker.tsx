@@ -42,23 +42,23 @@ export default function LanguagePicker({ lang }: { lang: string }) {
                         }),
                     }}></span>
             </button>
-            <div className={`${isOpen ? 'absolute' : 'hidden'}`}>
-                <div className="flex w-full justify-center">
-                    <div className="h-0 w-0 border-b-[12px] border-l-[10px] border-r-[10px] border-solid border-transparent border-b-white bg-transparent"></div>
-                </div>
+            <div
+                className={`absolute -ml-2 mt-3 overflow-hidden ${isOpen ? 'max-h-20' : 'max-h-0'}`}
+                style={{
+                    transitionProperty: 'max-height',
+                    transitionDuration: '200ms',
+                    transitionTimingFunction: 'ease-in-out',
+                    transitionDelay: '50ms',
+                }}>
                 <ul
-                    className={`flex flex-col items-center justify-center rounded-b bg-white transition`}>
+                    className={`flex flex-col gap-2 rounded-b-sm bg-white p-2 transition`}>
                     {languages.map((language) => (
-                        <li
-                            key={language}
-                            className={`w-full cursor-pointer px-3 py-1 text-center ${language === lang ? 'bg-neutral-300' : 'hover:bg-neutral-200'}`}>
-                            {language === lang ? (
-                                lang
-                            ) : (
-                                <a href={`/${language}${location}`}>
-                                    {language}
-                                </a>
-                            )}
+                        <li key={language}>
+                            <a
+                                className={`w-full py-1 pl-1 pr-6 text-start font-mono text-sm ${language === lang ? 'bg-secondary' : 'hover:bg-primary hover:text-white'}`}
+                                href={`/${language}${location}`}>
+                                {language.toUpperCase()}
+                            </a>
                         </li>
                     ))}
                 </ul>
