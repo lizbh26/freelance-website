@@ -1,10 +1,11 @@
+import { useTranslation } from '@/app/i18n';
 import Image from 'next/image';
 
-export default function Services() {
+export default async function Services({ lang }: { lang: string }) {
     return (
         <section
             id="services"
-            className="bg-neutral-100 px-36 py-10 text-center">
+            className="scroll-mt-20 bg-neutral-100 px-36 py-10 text-center">
             <h2 className="pb-8 text-center text-4xl font-bold">
                 What can we do for you?
             </h2>
@@ -22,7 +23,7 @@ export default function Services() {
             </div>
             <p>
                 Or, you can{' '}
-                <a className="underline" href="services">
+                <a className="underline" href={`/${lang}/services`}>
                     check out our entire catalogue
                 </a>
             </p>

@@ -8,8 +8,8 @@ export default function Home({ lang }: { lang: string }) {
         <div>
             <Header lang={lang} />
             <AboutUs />
-            <Services />
-            <section id="portfolio" className="mb-16 mt-10 scroll-mt-24">
+            <Services lang={lang} />
+            <section id="portfolio" className="mb-16 mt-10 scroll-mt-28">
                 <div>
                     <h2 className="text-center text-4xl font-bold">
                         Simple. Elegant. Efficient.
