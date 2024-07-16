@@ -24,7 +24,7 @@ export default function LanguagePicker({ lang }: { lang: string }) {
     }, []);
 
     const pathname = usePathname();
-    const location = pathname.split(`/${lang}`)[2] ?? '';
+    const location = pathname.split(`/${lang}`)[1] ?? '';
     return (
         <div className="relative" ref={menuRef}>
             <button
