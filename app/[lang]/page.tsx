@@ -1,4 +1,3 @@
-import Navbar from './components/navbar';
 import Home from './home';
 
 export default function Main({
@@ -8,7 +7,6 @@ export default function Main({
 }) {
     return (
         <main className="scroll-smooth bg-white text-black">
-            <Navbar />
             <Home lang={lang} />
         </main>
     );

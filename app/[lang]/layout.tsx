@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import { dir } from 'i18next';
 
 import { languages } from '../i18n/settings';
 import './globals.css';
+
+import Navbar from './components/navbar';
 
 export async function generateStaticParams() {
     return languages.map((lang) => ({ lang }));
@@ -25,7 +26,10 @@ export default function RootLayout({
 }>) {
     return (
         <html lang={lang} className="scroll-smooth">
-            <body className={inter.className}>{children}</body>
+            <body className={inter.className}>
+                <Navbar lang={lang} />
+                {children}
+            </body>
         </html>
     );
 }
