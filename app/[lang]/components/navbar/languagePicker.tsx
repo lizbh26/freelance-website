@@ -43,13 +43,7 @@ export default function LanguagePicker({ lang }: { lang: string }) {
                     }}></span>
             </button>
             <div
-                className={`absolute -ml-2 mt-3 overflow-hidden ${isOpen ? 'max-h-20' : 'max-h-0'}`}
-                style={{
-                    transitionProperty: 'max-height',
-                    transitionDuration: '200ms',
-                    transitionTimingFunction: 'ease-in-out',
-                    transitionDelay: '50ms',
-                }}>
+                className={`absolute -ml-2 mt-3 overflow-hidden transition-all ${isOpen ? 'max-h-20' : 'max-h-0'}`}>
                 <ul
                     className={`flex flex-col gap-2 rounded-b-sm bg-white p-2 transition`}>
                     {languages.map((language) => (
