@@ -1,5 +1,9 @@
 export const fallbackLng = 'en'
-export const languages = [fallbackLng, 'es']
+export const languages: [typeof fallbackLng, 'es'] = [fallbackLng, 'es']
+export const languageNames = {
+  "es": "Español",
+  "en": "English"
+}
 export const defaultNamespace = 'translation'
 export const lastLanguageCookieName = 'i18next'
 
