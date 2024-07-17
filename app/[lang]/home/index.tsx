@@ -9,7 +9,9 @@ export default function Home({ lang }: { lang: string }) {
             <Header lang={lang} />
             <AboutUs />
             <Services lang={lang} />
-            <section id="portfolio" className="mb-16 mt-10 scroll-mt-28">
+            <section
+                id="portfolio"
+                className="mb-16 mt-10 scroll-mt-28 px-5 md:px-20">
                 <div>
                     <h2 className="text-center text-4xl font-bold">
                         Simple. Elegant. Efficient.
@@ -24,7 +26,9 @@ export default function Home({ lang }: { lang: string }) {
                 <h2 className="text-center text-4xl font-bold">
                     Let&apos;s get started!
                 </h2>
-                <form action="" className="w-1/3">
+                <form
+                    action=""
+                    className="w-full px-5 sm:w-3/4 md:w-2/3 md:px-0 lg:w-1/2">
                     <div className="my-3 flex flex-col">
                         <label htmlFor="email">Your email</label>
                         <input
