@@ -14,17 +14,21 @@ export default function AboutUs() {
                         We are <ChangingAdjectives />
                     </h3>
                 </div>
-                <p className="mb-4">
-                    At Digital Obelisk, we believe that helping out the little
-                    guy is the best way to make a difference in this world, and
-                    so we want to give small businesses the same opportunities
-                    that the giants pay millions of dollars for.
-                </p>
-                <p>
-                    In line with this philosophy, we pride ourselves with being
-                    a very inclusive company, so no matter what your background
-                    may be, we are here to help you and your dreams grow.
-                </p>
+                <div className="text-start">
+                    <p className="mb-4">
+                        At Digital Obelisk, we believe that helping out the
+                        little guy is the best way to make a difference in this
+                        world, and so we want to give small businesses the same
+                        opportunities that the giants pay millions of dollars
+                        for.
+                    </p>
+                    <p>
+                        In line with this philosophy, we pride ourselves with
+                        being a very inclusive company, so no matter what your
+                        background may be, we are here to help you and your
+                        dreams grow.
+                    </p>
+                </div>
             </div>
         </section>
     );
