@@ -5,9 +5,5 @@ export default function Main({
 }: {
     params: { lang: string };
 }) {
-    return (
-        <main className="scroll-smooth bg-white text-black">
-            <Home lang={lang} />
-        </main>
-    );
+    return <Home lang={lang} />;
 }
