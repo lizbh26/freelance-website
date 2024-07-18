@@ -1,7 +1,7 @@
 'use client';
 import feather from 'feather-icons';
 import { useEffect, useRef, useState } from 'react';
-import { languages } from '@/app/i18n/settings';
+import { languageNames, languages } from '@/app/i18n/settings';
 import { usePathname } from 'next/navigation';
 
 export default function LanguagePicker({ lang }: { lang: string }) {
@@ -26,7 +26,7 @@ export default function LanguagePicker({ lang }: { lang: string }) {
     const pathname = usePathname();
     const location = pathname.split(`/${lang}`)[1] ?? '';
     return (
-        <div className="relative" ref={menuRef}>
+        <div className="md:relative" ref={menuRef}>
             <button
                 onClick={() => setIsOpen(!isOpen)}
                 className="flex cursor-pointer items-center justify-center">
@@ -35,7 +35,7 @@ export default function LanguagePicker({ lang }: { lang: string }) {
                         __html: feather.icons.globe.toSvg(),
                     }}></span>
                 <span
-                    className={`w-5 transition ${isOpen ? 'rotate-180' : ''}`}
+                    className={`hidden w-5 transition md:block ${isOpen ? 'rotate-180' : ''}`}
                     dangerouslySetInnerHTML={{
                         __html: feather.icons['chevron-down'].toSvg({
                             width: '100%',
@@ -43,15 +43,32 @@ export default function LanguagePicker({ lang }: { lang: string }) {
                     }}></span>
             </button>
             <div
-                className={`absolute -ml-2 mt-3 overflow-hidden transition-all ${isOpen ? 'max-h-20' : 'max-h-0'}`}>
-                <ul
-                    className={`flex flex-col gap-2 rounded-b-sm bg-white p-2 transition`}>
+                className={`absolute right-0 mt-6 w-1/2 min-w-44 overflow-hidden bg-white shadow transition-all duration-300 sm:w-1/3 md:-left-12 md:right-auto md:mt-4 md:w-auto md:min-w-36 ${isOpen ? 'translate-x-0 md:max-h-screen' : 'translate-x-full md:max-h-0 md:translate-x-0'}`}>
+                <h3 className="py-2 text-center text-xl text-primary">
+                    Choose language
+                </h3>
+                <hr />
+                <ul className="flex flex-col gap-2 px-5 py-2 md:px-2">
                     {languages.map((language) => (
-                        <li key={language}>
+                        <li key={language} className="w-full">
                             <a
-                                className={`w-full py-1 pl-1 pr-6 text-start font-mono text-sm ${language === lang ? 'bg-secondary' : 'hover:bg-primary hover:text-white'}`}
+                                className={`flex w-full items-center py-1 ${language === lang ? 'text-primary' : 'hover:bg-primary hover:text-white'}`}
                                 href={`/${language}${location}`}>
-                                {language.toUpperCase()}
+                                <span className="w-[20%] pl-[10%]">
+                                    {language.toUpperCase()}
+                                </span>
+                                <span className="w-[70%] text-center">
+                                    {languageNames[language]}
+                                </span>
+                                {language === lang ? (
+                                    <span
+                                        className="inline-block"
+                                        dangerouslySetInnerHTML={{
+                                            __html: feather.icons.check.toSvg(),
+                                        }}></span>
+                                ) : (
+                                    <></>
+                                )}
                             </a>
                         </li>
                     ))}
