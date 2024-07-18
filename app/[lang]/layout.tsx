@@ -5,6 +5,7 @@ import { languages } from '../i18n/settings';
 import './globals.css';
 
 import Navbar from './components/navbar';
+import Footer from './components/footer/footer';
 
 export async function generateStaticParams() {
     return languages.map((lang) => ({ lang }));
@@ -26,9 +27,10 @@ export default function RootLayout({
 }>) {
     return (
         <html lang={lang} className="scroll-smooth">
-            <body className={inter.className}>
+            <body className={inter.className + ' bg-neutral-100'}>
                 <Navbar lang={lang} />
-                {children}
+                <div className="bg-white">{children}</div>
+                <Footer />
             </body>
         </html>
     );
