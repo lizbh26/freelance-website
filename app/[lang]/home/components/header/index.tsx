@@ -1,5 +1,6 @@
 import { useTranslation } from '@/app/i18n';
 import Image from 'next/image';
+import HeaderSeparator from './separator';
 
 export default async function Header({ lang }: { lang: string }) {
     const { t } = await useTranslation(lang, 'home');
@@ -17,13 +18,7 @@ export default async function Header({ lang }: { lang: string }) {
                     </button>
                 </div>
             </div>
-            <Image
-                className="w-full overflow-hidden"
-                src={'/assets/header-separator-2.png'}
-                alt=""
-                width={'1920'}
-                height={'200'}
-            />
+            <HeaderSeparator />
         </header>
     );
 }
