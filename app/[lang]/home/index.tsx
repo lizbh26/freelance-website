@@ -22,12 +22,12 @@ export default function Home({ lang }: { lang: string }) {
             <Testimonials />
             <section
                 id="call-to-action"
-                className="mt-10 flex scroll-mt-24 flex-col items-center justify-center">
+                className="flex scroll-mt-24 flex-col items-center justify-center pb-24 pt-16">
                 <h2 className="text-center text-4xl font-bold">
                     {"Let's get started!"}
                 </h2>
                 <a
-                    className="mt-6 rounded bg-primary px-4 py-2 text-white transition hover:scale-105"
+                    className="mt-6 rounded bg-primary px-4 py-2 font-bold text-white transition hover:scale-105"
                     href={`/${lang}/contact`}>
                     Get a free consultation →
                 </a>
