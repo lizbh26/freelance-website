@@ -1,3 +1,5 @@
+import feather from 'feather-icons';
+
 export default function ContactUs({
     params: { lang },
 }: {
@@ -6,11 +8,11 @@ export default function ContactUs({
     return (
         <main>
             <header className="flex bg-secondary pb-16 pt-36 md:px-20 lg:px-36">
-                <h1 className="w-full text-center text-4xl font-bold text-black md:text-start">
+                <h1 className="w-full text-center text-4xl font-bold text-black">
                     Contact us
                 </h1>
             </header>
-            <div className="py-6">
+            <div className="flex w-full items-center justify-center py-6">
                 <form
                     action=""
                     className="w-full px-5 sm:w-3/4 md:w-2/3 md:px-0 lg:w-1/2">
@@ -41,8 +43,13 @@ export default function ContactUs({
                         />
                     </div>
                     <div className="flex w-full items-center justify-center">
-                        <button className="rounded bg-primary px-5 py-2 text-white transition hover:scale-105">
-                            Send
+                        <button className="flex items-center justify-center gap-2 rounded border-4 border-primary bg-primary px-5 py-2 font-bold text-white transition hover:scale-105 hover:bg-primary hover:text-white md:bg-white md:text-black">
+                            Send{' '}
+                            <span
+                                className="inline-block"
+                                dangerouslySetInnerHTML={{
+                                    __html: feather.icons.send.toSvg(),
+                                }}></span>
                         </button>
                     </div>
                 </form>
