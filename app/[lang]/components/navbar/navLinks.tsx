@@ -8,7 +8,7 @@ export default function NavigationLinks({ lang }: { lang: string }) {
     return (
         <>
             <a
-                className={`p-2 transition hover:text-primary md:hidden ${page === '' ? 'border-b-4 border-b-primary' : ''}`}
+                className={`p-2 transition md:hidden ${page === '' ? 'border-b-4 border-b-primary' : ''}`}
                 href={`/${lang}`}>
                 Home
             </a>
