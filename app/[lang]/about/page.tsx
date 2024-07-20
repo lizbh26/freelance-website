@@ -1,4 +1,18 @@
 import ChangingAdjectives from './components/changingAdjectives';
+import { Metadata } from 'next';
+import { useTranslation } from '@/app/i18n';
+
+export async function generateMetadata({
+    params: { lang },
+}: {
+    params: { lang: string };
+}): Promise<Metadata> {
+    const { t } = await useTranslation(lang, 'about');
+    return {
+        title: t('meta.title'),
+        description: t('meta.description'),
+    };
+}
 
 export default function AboutUs({
     params: { lang },
