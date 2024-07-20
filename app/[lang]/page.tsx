@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { useTranslation } from '../i18n';
+import { getTranslations } from '../i18n';
 
 import Home from './home';
 
@@ -8,7 +8,7 @@ export async function generateMetadata({
 }: {
     params: { lang: string };
 }): Promise<Metadata> {
-    const { t } = await useTranslation(lang, 'home');
+    const { t } = await getTranslations(lang, 'home');
     return {
         title: t('meta.title'),
         description: t('meta.description'),

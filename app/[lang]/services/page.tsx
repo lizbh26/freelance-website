@@ -1,12 +1,12 @@
 import { Metadata } from 'next';
-import { useTranslation } from '@/app/i18n';
+import { getTranslations } from '@/app/i18n';
 
 export async function generateMetadata({
     params: { lang },
 }: {
     params: { lang: string };
 }): Promise<Metadata> {
-    const { t } = await useTranslation(lang, 'services');
+    const { t } = await getTranslations(lang, 'services');
     return {
         title: t('meta.title'),
         description: t('meta.description'),
@@ -37,7 +37,7 @@ export default function Services({
                         conversation.
                     </p>
                     <p>
-                        And when you own the conversation, you don't have to
+                        And when you own the conversation, you {"don't"} have to
                         battle with other brands for the attention of potential
                         customers, like in social media; and you can control
                         with precision how users interact with your brand and
@@ -80,10 +80,10 @@ export default function Services({
                         Social media management
                     </h2>
                     <h3 className="text-center text-lg italic text-neutral-500">
-                        Appear on everybody's feeds
+                        Appear on {"everybody's"} feeds
                     </h3>
                     <p>
-                        In today's age, people crave connections and
+                        In {"today's"} age, people crave connections and
                         authenticity, things that brands without social outreach
                         or a corporate approach can hardly cultivate.
                     </p>
@@ -102,7 +102,7 @@ export default function Services({
                     </h3>
                     <p>
                         From outrageous tariffs to oversaturated markets, many
-                        times the {"'free'"} marketplaces don't fit your
+                        times the {"'free'"} marketplaces {"don't"} fit your
                         business needs. This is where custo marketplaces arise:
                         you get the advantages of your having your own website
                         (controling the conversation) and of offering your

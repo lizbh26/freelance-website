@@ -1,9 +1,9 @@
-import { useTranslation } from '@/app/i18n';
+import { getTranslations } from '@/app/i18n';
 import Image from 'next/image';
 import HeaderSeparator from './separator';
 
 export default async function Header({ lang }: { lang: string }) {
-    const { t } = await useTranslation(lang, 'home');
+    const { t } = await getTranslations(lang, 'home');
 
     return (
         <header id="top" className="">

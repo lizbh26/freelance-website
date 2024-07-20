@@ -1,13 +1,13 @@
 import feather from 'feather-icons';
 import { Metadata } from 'next';
-import { useTranslation } from '@/app/i18n';
+import { getTranslations } from '@/app/i18n';
 
 export async function generateMetadata({
     params: { lang },
 }: {
     params: { lang: string };
 }): Promise<Metadata> {
-    const { t } = await useTranslation(lang, 'contact');
+    const { t } = await getTranslations(lang, 'contact');
     return {
         title: t('meta.title'),
         description: t('meta.description'),
@@ -28,8 +28,8 @@ export default function ContactUs({
             </header>
             <article className="px-5 py-6 text-center">
                 <h3 className="text-xl">
-                    Please fill out this form and we'll get in contact as soon
-                    as possible.
+                    Please fill out this form and we{"'"}ll get in contact as
+                    soon as possible.
                 </h3>
                 <section className="mb-10 flex w-full items-center justify-center">
                     <form
