@@ -35,7 +35,8 @@ export default function NavigationLinks({ lang }: { lang: string }) {
             <a
                 className="rounded bg-primary px-3 py-2 text-center font-bold text-white transition hover:scale-105"
                 href={`/${lang}/contact`}>
-                Schedule a <br className="hidden md:block lg:hidden" /> free
+                Schedule a{' '}
+                <br className="min-[410px]:hidden md:block lg:hidden" /> free
                 call
             </a>
         </>
