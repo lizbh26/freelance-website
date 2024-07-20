@@ -8,7 +8,7 @@ export default async function Header({ lang }: { lang: string }) {
     return (
         <header id="top" className="">
             <div className="flex justify-center bg-secondary pb-12 pt-36 md:justify-start md:px-20 md:pb-6 lg:px-36">
-                <div className="flex w-5/6 flex-col items-center md:w-1/2">
+                <div className="flex w-5/6 flex-col items-start md:w-1/2">
                     <h1 className="mb-4 text-4xl font-bold">
                         {t('header.title')}
                     </h1>
