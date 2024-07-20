@@ -10,8 +10,8 @@ export default function Services({
                     Services
                 </h1>
             </header>
-            <article className="px-5 py-10 sm:px-10">
-                <section className="mb-5">
+            <article className="px-5 py-10 sm:px-10 md:px-20 lg:px-36">
+                <section className="mb-10">
                     <h2 className="text-center text-3xl">Business Websites</h2>
                     <h3 className="text-center text-lg italic text-neutral-500">
                         Your own digital hub
@@ -29,7 +29,7 @@ export default function Services({
                         with your products.
                     </p>
                 </section>
-                <section className="mb-5">
+                <section className="mb-10">
                     <h2 className="text-center text-3xl">
                         Search Engine Optimization (SEO)
                     </h2>
@@ -44,7 +44,7 @@ export default function Services({
                         make your brand grow
                     </p>
                 </section>
-                <section className="mb-5">
+                <section className="mb-10">
                     <h2 className="text-center text-3xl">
                         Digital marketing campaings
                     </h2>
@@ -60,7 +60,7 @@ export default function Services({
                         to pay nearly as much for even better results
                     </p>
                 </section>
-                <section className="mb-5">
+                <section className="mb-10">
                     <h2 className="text-center text-3xl">
                         Social media management
                     </h2>
