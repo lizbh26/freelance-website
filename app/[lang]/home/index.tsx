@@ -1,5 +1,4 @@
 import Header from './components/header';
-import AboutUs from './components/about-us';
 import Services from './components/services';
 import Testimonials from './components/testimonials';
 
@@ -7,7 +6,6 @@ export default function Home({ lang }: { lang: string }) {
     return (
         <main>
             <Header lang={lang} />
-            <AboutUs />
             <Services lang={lang} />
             <section
                 id="portfolio"
@@ -27,10 +25,11 @@ export default function Home({ lang }: { lang: string }) {
                     {"Let's get started!"}
                 </h2>
                 <a
-                    className="mt-6 rounded bg-primary px-4 py-2 font-bold text-white transition hover:scale-105"
+                    className="mb-2 mt-6 rounded bg-primary px-4 py-2 font-bold text-white transition hover:scale-105"
                     href={`/${lang}/contact`}>
                     Get a free consultation →
                 </a>
+                <p>First time clients get a discount!</p>
             </section>
         </main>
     );
