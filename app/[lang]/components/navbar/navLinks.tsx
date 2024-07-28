@@ -33,7 +33,7 @@ export default function NavigationLinks({ lang }: { lang: string }) {
                 Pricing
             </a>
             <a
-                className="rounded bg-primary px-3 py-2 text-center font-bold text-white transition hover:scale-105"
+                className="rounded bg-primary px-3 py-2 text-center font-bold text-white transition hover:scale-105 md:mx-3"
                 href={`/${lang}/contact`}>
                 Schedule a{' '}
                 <br className="min-[410px]:hidden md:block lg:hidden" /> free
