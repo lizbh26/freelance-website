@@ -26,20 +26,20 @@ export default function AboutUs({
                     About us
                 </h1>
             </header>
-            <article>
+            <article className="px-5 md:px-20 lg:px-36">
                 <section
                     id="who-are-we"
-                    className="flex w-full items-center justify-center px-5 pb-16 pt-5 md:justify-start md:px-20 lg:px-36">
-                    <div className="text-center md:text-start">
+                    className="mb-16 mt-8 flex w-full items-center justify-center md:justify-start">
+                    <div className="">
                         <div className="mb-5">
-                            <h2 className="mb-2 text-3xl font-bold md:text-4xl">
+                            <h2 className="mb-2 text-center text-3xl font-bold md:text-4xl">
                                 Who are we?
                             </h2>
-                            <h3 className="text-2xl md:text-3xl">
+                            <h3 className="text-center text-2xl md:text-3xl">
                                 We are <ChangingAdjectives />
                             </h3>
                         </div>
-                        <div className="text-start">
+                        <div className="text-justify">
                             <p className="mb-4">
                                 At Digital Obelisk, we believe that helping out
                                 the little guy is the best way to make a
@@ -55,6 +55,32 @@ export default function AboutUs({
                             </p>
                         </div>
                     </div>
+                </section>
+                <section id="what-do-we-do" className="mb-16">
+                    <h2 className="mb-5 text-center text-3xl font-bold md:text-4xl">
+                        What do we do?
+                    </h2>
+                    <div className="text-justify">
+                        <p className="mb-4">
+                            Digital Obelisk is a digital services agency,
+                            meaning we specialize in creating anything digital
+                            that your business might need: from illustrations
+                            and flyers to full-blown websites or applications.
+                        </p>
+                        <p>
+                            Since every business is different, and we offer a
+                            great range of services, we cant provide an accurate
+                            price upfront. That’s why we offer free
+                            consultations to first time clients with no
+                            compromise, so you can be sure you’re getting
+                            exactly what you want.
+                        </p>
+                    </div>
+                </section>
+                <section id="what-have-we-done" className="mb-16">
+                    <h2 className="text-center text-3xl font-bold md:text-4xl">
+                        What have we done?
+                    </h2>
                 </section>
             </article>
         </main>
