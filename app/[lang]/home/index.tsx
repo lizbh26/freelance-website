@@ -1,11 +1,13 @@
 import Header from './components/header';
 import Services from './components/services';
 import Testimonials from './components/testimonials';
+import AboutUs from './components/about-us';
 
 export default function Home({ lang }: { lang: string }) {
     return (
         <main>
             <Header lang={lang} />
+            <AboutUs />
             <Services lang={lang} />
             <section
                 id="portfolio"
