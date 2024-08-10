@@ -17,8 +17,9 @@ export default function ServiceList() {
             <div className="md:w-2/3 md:pr-4">
                 {services.map((service) => (
                     <section
-                        className={` ${selected.id !== service.id ? 'hidden' : ''}`}
-                        id={service.id}>
+                        id={service.id}
+                        key={service.id}
+                        className={` ${selected.id !== service.id ? 'hidden' : ''}`}>
                         <h2 className="text-center text-3xl">
                             {service.title}
                         </h2>
