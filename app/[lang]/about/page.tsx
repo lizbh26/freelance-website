@@ -26,7 +26,7 @@ export default function AboutUs({
                     About us
                 </h1>
             </header>
-            <article className="px-5 md:px-20 lg:px-36">
+            <article className="px-5 sm:px-10 md:px-20 lg:px-36">
                 <section
                     id="who-are-we"
                     className="mb-16 mt-8 flex w-full items-center justify-center md:justify-start">
