@@ -5,12 +5,17 @@ export default async function Services({ lang }: { lang: string }) {
     return (
         <section
             id="services"
-            className="scroll-mt-20 px-5 py-10 md:px-20 lg:px-36">
-            <h2 className="pb-8 text-center text-4xl font-bold">
-                What can we do for you?
-            </h2>
+            className="scroll-mt-20 bg-neutral-100 px-5 py-10 md:px-20 lg:px-36">
+            <div className="pb-8 text-center">
+                <h2 className="text-3xl font-bold">
+                    Make your business stand out from the rest
+                </h2>
+                <p>
+                    Leverage digital tools to gain an edge from the competition
+                </p>
+            </div>
             <div className="mb-5 flex flex-col justify-between gap-6 sm:flex-row">
-                <div className="flex w-full flex-col items-center justify-center bg-neutral-100 py-4 transition hover:cursor-pointer hover:bg-neutral-300">
+                <div className="flex w-full flex-col items-center justify-center bg-neutral-200 py-4 transition hover:cursor-pointer hover:bg-neutral-300">
                     <Image
                         src="/assets/img/webpage_icon.png"
                         alt="Website icon"
@@ -18,21 +23,19 @@ export default async function Services({ lang }: { lang: string }) {
                         height={150}
                     />
                     <h3 className="px-4 text-center text-2xl">
-                        Business websites & landing pages
+                        Business websites
                     </h3>
                 </div>
-                <div className="flex w-full flex-col items-center justify-center bg-neutral-100 py-4 transition hover:cursor-pointer hover:bg-neutral-300">
+                <div className="flex w-full flex-col items-center justify-center bg-neutral-200 py-4 transition hover:cursor-pointer hover:bg-neutral-300">
                     <Image
                         src="/assets/img/advertising.png"
                         alt="Website icon"
                         width={150}
                         height={150}
                     />
-                    <h3 className="px-4 text-center text-2xl">
-                        Ad campaigns & email lists
-                    </h3>
+                    <h3 className="px-4 text-center text-2xl">Ad campaigns</h3>
                 </div>
-                <div className="flex w-full flex-col items-center justify-center bg-neutral-100 py-4 transition hover:cursor-pointer hover:bg-neutral-300">
+                <div className="flex w-full flex-col items-center justify-center bg-neutral-200 py-4 transition hover:cursor-pointer hover:bg-neutral-300">
                     <Image
                         src="/assets/img/shopify_logo.png"
                         alt="Website icon"
@@ -40,7 +43,7 @@ export default async function Services({ lang }: { lang: string }) {
                         height={150}
                     />
                     <h3 className="px-4 text-center text-2xl">
-                        Custom e-Commerce solutions
+                        e-Commerce solutions
                     </h3>
                 </div>
             </div>
