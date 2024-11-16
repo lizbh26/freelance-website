@@ -1,5 +1,6 @@
 import { getTranslations } from '@/app/i18n';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default async function Services({ lang }: { lang: string }) {
     return (
@@ -15,7 +16,12 @@ export default async function Services({ lang }: { lang: string }) {
                 </p>
             </div>
             <div className="mb-5 flex flex-col justify-between gap-6 sm:flex-row">
-                <div className="flex w-full flex-col items-center justify-center bg-neutral-200 py-4 transition hover:cursor-pointer hover:bg-neutral-300">
+                <Link
+                    className="flex w-full flex-col items-center justify-center bg-neutral-200 py-4 transition hover:cursor-pointer hover:bg-neutral-300"
+                    href={{
+                        pathname: '/services',
+                        query: { search: 'business_website' },
+                    }}>
                     <Image
                         src="/assets/img/webpage_icon.png"
                         alt="Website icon"
@@ -25,27 +31,37 @@ export default async function Services({ lang }: { lang: string }) {
                     <h3 className="px-4 text-center text-2xl">
                         Business websites
                     </h3>
-                </div>
-                <div className="flex w-full flex-col items-center justify-center bg-neutral-200 py-4 transition hover:cursor-pointer hover:bg-neutral-300">
+                </Link>
+                <Link
+                    className="flex w-full flex-col items-center justify-center bg-neutral-200 py-4 transition hover:cursor-pointer hover:bg-neutral-300"
+                    href={{
+                        pathname: '/services',
+                        query: { search: 'ad_campaign' },
+                    }}>
                     <Image
                         src="/assets/img/advertising.png"
-                        alt="Website icon"
+                        alt="Advertising icon"
                         width={150}
                         height={150}
                     />
                     <h3 className="px-4 text-center text-2xl">Ad campaigns</h3>
-                </div>
-                <div className="flex w-full flex-col items-center justify-center bg-neutral-200 py-4 transition hover:cursor-pointer hover:bg-neutral-300">
+                </Link>
+                <Link
+                    className="flex w-full flex-col items-center justify-center bg-neutral-200 py-4 transition hover:cursor-pointer hover:bg-neutral-300"
+                    href={{
+                        pathname: '/services',
+                        query: { search: 'ecommerce' },
+                    }}>
                     <Image
-                        src="/assets/img/shopify_logo.png"
-                        alt="Website icon"
+                        src="/assets/img/ecommerce.png"
+                        alt="e-Commerce icon"
                         width={150}
                         height={150}
                     />
                     <h3 className="px-4 text-center text-2xl">
                         e-Commerce solutions
                     </h3>
-                </div>
+                </Link>
             </div>
             <div className="text-center">
                 <p>And many more things!</p>
