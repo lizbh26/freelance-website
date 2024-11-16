@@ -27,7 +27,9 @@ export default function Services({
                 </h1>
             </header>
             <article className="px-5 py-10 sm:px-16 md:px-20 lg:px-36">
-                <ServiceList />
+                <section className="mb-10 mt-6">
+                    <ServiceList />
+                </section>
                 <section className="mt-8">
                     <h2 className="text-2xl">
                         Did any of these catch your eye?

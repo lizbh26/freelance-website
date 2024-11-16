@@ -20,7 +20,7 @@ export default function ServiceList() {
                         id={service.id}
                         key={service.id}
                         className={` ${selected.id !== service.id ? 'hidden' : ''}`}>
-                        <h2 className="text-center text-3xl">
+                        <h2 className="text-center text-3xl font-bold">
                             {service.title}
                         </h2>
                         <h3
