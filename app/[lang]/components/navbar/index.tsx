@@ -27,7 +27,10 @@ export default function Navbar({ lang }: { lang: string }) {
             className={`fixed z-20 w-full bg-white px-5 py-3 text-black shadow transition sm:px-10 md:px-10 min-[840px]:px-20 lg:px-36 ${isShowing ? '-translate-y-0' : '-translate-y-full'}`}>
             <div className="flex w-full items-center justify-between">
                 <MobileNavigationMenu lang={lang} />
-                <a className="text-xl text-primary" href={`/${lang}`}>
+                <a
+                    className="flex items-center justify-center gap-2 text-xl text-primary"
+                    href={`/${lang}`}>
+                    <img src="/assets/img/logo.png" alt="" className="w-8" />
                     Digital Obelisk
                 </a>
                 <div className="flex items-center gap-6">
