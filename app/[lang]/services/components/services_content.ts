@@ -79,8 +79,10 @@ export const services: Service[] = [
     {
         id: 'content-writing',
         title: 'Content writing',
-        tagline: 'placeholder',
-        body: ``,
+        tagline: "Can't post anything if you've got nothing to post",
+        body: `<p>
+            
+        </p>`,
     },
     {
         id: 'e-commerce',
@@ -89,9 +91,9 @@ export const services: Service[] = [
         body: `<p>
                         From outrageous tariffs to oversaturated markets, many
                         times the "free" marketplaces don't fit your
-                        business needs. This is where custo marketplaces arise:
-                        you get the advantages of your having your own website
-                        (controling the conversation) and of offering your
+                        business needs. This is why custom marketplaces can be so powerful:
+                        you get the advantages of having your own website
+                        (controling the conversation) and offering your
                         product or service online (worldwide reach)
                     </p>`,
     },
