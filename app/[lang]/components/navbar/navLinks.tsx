@@ -2,7 +2,21 @@
 
 import { usePathname } from 'next/navigation';
 
-export default function NavigationLinks({ lang }: { lang: string }) {
+export interface LinksTexts {
+    home: string;
+    about: string;
+    services: string;
+    cta_1: string;
+    cta_2: string;
+}
+
+export default function NavigationLinks({
+    lang,
+    links,
+}: {
+    lang: string;
+    links: LinksTexts;
+}) {
     const pathname = usePathname();
     const page = pathname.split(`/${lang}`)[1];
     return (
@@ -10,27 +24,28 @@ export default function NavigationLinks({ lang }: { lang: string }) {
             <a
                 className={`my-1 w-fit border-b-4 px-2 py-1 transition hover:border-b-primary md:my-0 md:hidden md:px-0 md:py-2 ${page === '' ? 'border-b-primary' : 'border-b-white'}`}
                 href={`/${lang}`}>
-                Home
+                {links.home}
             </a>
             <a
                 className={`my-1 w-fit border-b-4 px-2 py-1 transition hover:border-b-primary md:my-0 md:px-0 md:py-2 ${page === '/about' ? 'border-b-primary' : 'border-b-white'}`}
                 href={`/${lang}/about`}>
-                About us
+                {links.about}
             </a>
             <a
                 className={`my-1 w-fit border-b-4 px-2 py-1 transition hover:border-b-primary md:my-0 md:px-0 md:py-2 ${page === '/services' ? 'border-b-primary' : 'border-b-white'}`}
                 href={`/${lang}/services`}>
-                Services
+                {links.services}
             </a>
             {/* <a
                 className={`my-1 w-fit border-b-4 px-2 py-1 transition hover:border-b-primary md:my-0 md:px-0 md:py-2 ${page === '/testimonials' ? 'border-b-primary' : 'border-b-white'}`}
                 href={`/${lang}/testimonials`}>
-                Testimonials
             </a> */}
             <a
                 className="rounded bg-primary px-3 py-2 text-center font-bold text-white transition hover:scale-105 md:mx-3"
                 href={`/${lang}/contact`}>
-                Schedule a <br className="min-[410px]:hidden" /> free call
+                {links.cta_1}{' '}
+                <br className="min-[410px]:hidden md:block min-[900px]:hidden" />{' '}
+                {links.cta_2}
             </a>
         </>
     );

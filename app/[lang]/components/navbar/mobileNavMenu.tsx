@@ -1,9 +1,15 @@
 'use client';
 import feather from 'feather-icons';
 import { useState, useRef, useEffect } from 'react';
-import NavigationLinks from './navLinks';
+import NavigationLinks, { LinksTexts } from './navLinks';
 
-export default function MobileNavigationMenu({ lang }: { lang: string }) {
+export default function MobileNavigationMenu({
+    lang,
+    links,
+}: {
+    lang: string;
+    links: LinksTexts;
+}) {
     const [isOpen, setIsOpen] = useState(false);
     const menuRef = useRef<HTMLDivElement | null>(null);
 
@@ -35,7 +41,7 @@ export default function MobileNavigationMenu({ lang }: { lang: string }) {
                 <div
                     ref={menuRef}
                     className={`flex h-full w-3/5 flex-col gap-4 bg-white p-4 px-8 transition delay-200 sm:w-1/2 ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}>
-                    <NavigationLinks lang={lang} />
+                    <NavigationLinks lang={lang} links={links} />
                 </div>
             </div>
         </div>
