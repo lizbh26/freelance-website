@@ -1,4 +1,16 @@
 {
     "meta.title": "Get in contact | Digital Obelisk",
-    "meta.description": "Let's work together to elevate your business into the digital world. First time customers get a discount!"
+    "meta.description": "Let's work together to elevate your business into the digital world. First time customers get a discount!",
+
+    "header.title": "Contact us",
+
+    "body.disclaimer": "Since every business is different, and we offer a great range of services, we cant provide an accurate price upfront. That's why we offer free consultations with no compromise, so you can be sure you're getting exactly what you want.",
+    
+    "form.title": "Fill out this form and we'll get in contact as soon as possible.",
+    "form.email": "Your email",
+    "form.name": "Your name / company",
+    "form.brief-description": "Briefly describe your project",
+    "form.send": "Send",
+
+    "other.email": "For more inquiries, you can contact"
 }

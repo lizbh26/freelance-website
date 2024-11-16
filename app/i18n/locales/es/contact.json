@@ -1,4 +1,16 @@
 {
     "meta.title": "Contactános | Digital Obelisk",
-    "meta.description": "Trabajemos juntos para elevar tu negocio al mundo digital. Clientes nuevos tienen descuento!"
+    "meta.description": "Trabajemos juntos para elevar tu negocio al mundo digital. Clientes nuevos tienen descuento!",
+
+    "header.title": "Contactános",
+
+    "body.disclaimer": "Debido a que cada negocio es diferente, y a que ofrecemos un gran rango de servicios, no nos es posible dar un precio por adelantado. Es por eso por lo que ofrecemos cotizaciones gratis sin algún compromiso, para que puedas asegurarte de que vas a adquirir exactamente lo que quieres.",
+
+    "form.title": "Envía este formulario y nos pondremos en contacto lo más pronto posible.",
+    "form.email": "Correo electrónico",
+    "form.name": "Tu nombre / compañía",
+    "form.brief-description": "Describe brevemente tu proyecto",
+    "form.send": "Enviar",
+
+    "other.email": "Para más información, puedes contactar"
 }
