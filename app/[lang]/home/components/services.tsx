@@ -67,9 +67,11 @@ export default async function Services({ lang }: { lang: string }) {
                 <p>{t('services.and-more')}</p>
                 <div className="mb-1 mt-5 flex items-center justify-center gap-2">
                     <p>{t('services.pre-cta')}</p>
-                    <button className="rounded bg-primary p-2 px-4 font-bold text-white transition hover:scale-105">
+                    <a
+                        href={`/${lang}/contact`}
+                        className="rounded bg-primary p-2 px-4 font-bold text-white transition hover:scale-105">
                         {t('services.cta')}
-                    </button>
+                    </a>
                 </div>
                 <p>
                     {t('services.pre-link')}{' '}
