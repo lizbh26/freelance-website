@@ -1,7 +1,6 @@
 import Header from './components/header';
-import Services from './components/services';
-import Testimonials from './components/testimonials';
 import AboutUs from './components/about-us';
+import Services from './components/services';
 
 export default function Home({ lang }: { lang: string }) {
     return (
@@ -9,17 +8,6 @@ export default function Home({ lang }: { lang: string }) {
             <Header lang={lang} />
             <AboutUs />
             <Services lang={lang} />
-            <section
-                id="portfolio"
-                className="mb-16 mt-10 scroll-mt-28 px-5 md:px-20">
-                <div>
-                    <h2 className="text-center text-4xl font-bold">
-                        Simple. Elegant. Efficient.
-                    </h2>
-                    <p className="text-center">See it to believe it</p>
-                </div>
-            </section>
-            <Testimonials />
             <section
                 id="call-to-action"
                 className="flex scroll-mt-24 flex-col items-center justify-center pb-24 pt-16">
