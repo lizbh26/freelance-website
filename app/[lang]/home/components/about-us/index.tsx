@@ -1,4 +1,8 @@
-export default function AboutUs() {
+import { getTranslations } from '@/app/i18n';
+
+export default async function AboutUs({ lang }: { lang: string }) {
+    const { t } = await getTranslations(lang, 'home');
+
     return (
         <section
             id="about-us"
@@ -6,21 +10,11 @@ export default function AboutUs() {
             <div className="lg:flex lg:flex-row-reverse">
                 <div className="flex flex-col items-center justify-center gap-6 lg:w-3/5 lg:items-end lg:text-end xl:w-1/2">
                     <h2 className="text-center text-3xl font-bold lg:text-end">
-                        Work with people who care about your clients like you do
+                        {t('about-us.title')}
                     </h2>
                     <span className="flex flex-col gap-2">
-                        <p>
-                            We understand that the best and worst user
-                            experiences almost always come from technology: for
-                            every online order that gets delivered without flaw
-                            there is a website that is simply infuriating to
-                            use, and so people {'don’t'} bother.
-                        </p>
-                        <p>
-                            For this reason, our focus is always on the final
-                            client and on how they will perceive our solution,
-                            the product and your brand.
-                        </p>
+                        <p>{t('about-us.paragraph-1')}</p>
+                        <p>{t('about-us.paragraph-2')}</p>
                     </span>
                 </div>
                 <div className="mt-8 flex items-center justify-center px-4 lg:w-2/5 xl:w-1/2">

@@ -1,7 +1,27 @@
 {
     "meta.title": "Agencia digital para pequeñas empresas | Digital Obelisk",
     "meta.description": "Eleva tu negocio al mundo digital con una página web, campañas de anuncios digitales, mejor presencia en redes sociales y más!",
+
     "header.title": "La agencia digital para pequeñas empresas",
     "header.subtitle": "Ayudamos a dueños de pequeñas y medianas empresas escalar sus negocios mediante la adopcion de servicios digitales y a crecer sus ganancias con una mayor presencia en línea.",
-    "header.cta": "Obten una cotizacion"
+    "header.cta": "Obten una cotizacion",
+
+    "about-us.title": "Trabaja con personas a quienes les importen tus clientes tanto cómo a tí",
+    "about-us.paragraph-1": "Entendemos que tanto las mejores cómo las peores experiencias de los clientes vienen de la tecnología: aplicaciones lentas, páginas web frustrantes de navegar, información difícil de encontrar, y la lista continua. Todos estos problemas les cuestan a los negocios clientes potenciales, y les dan una mala reputación en el área tecnológica.",
+    "about-us.paragraph-2": "Por esta razón, en Digital Obelisk nuestro enfoque siempre será en el cliente y en cómo ellos percibiran nuestra solución, el producto, y tu marca.",
+
+    "services.title": "Haz que tú negocio destaque del resto",
+    "services.subtitle": "Aprovecha herramientas digitales para ganar una ventaja sobre tu competencia",
+    "services.website": "Páginas web",
+    "services.marketing": "Campañas de anuncios",
+    "services.e-commerce": " Soluciones e-Commerce",
+    "services.and-more": "Y muchos otros servicios",
+    "services.pre-cta": "Te interesa?",
+    "services.cta": "¡Empecemos a trabajar!",
+    "services.pre-link": "O, también puedes",
+    "services.link": "consultar todo nuestro catálogo",
+
+    "cta.title": "Empecemos a trabajar",
+    "cta.button": "Obten una cotización gratis",
+    "cta.incentive": "¡Clientes nuevos obtienen un descuento!"
 }
