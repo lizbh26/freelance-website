@@ -1,6 +1,7 @@
 import feather from 'feather-icons';
 import { Metadata } from 'next';
 import { getTranslations } from '@/app/i18n';
+import ContactForm from './contact_form';
 
 export async function generateMetadata({
     params: { lang },
@@ -30,50 +31,17 @@ export default async function ContactUs({
             <article className="px-5 py-6 text-center sm:px-10 md:px-20 lg:px-36">
                 <h3 className="text-xl">{t('form.title')}</h3>
                 <section className="mb-10 mt-5 flex w-full flex-col items-center justify-center md:flex-row">
-                    <form
-                        action=""
-                        className="w-full rounded-md border-2 border-gray-200 p-5 shadow-lg shadow-slate-600 sm:w-3/4 md:w-2/3 lg:w-1/2">
-                        <div className="mb-3 flex flex-col">
-                            <label htmlFor="email" className="text-start">
-                                {t('form.email')}:
-                            </label>
-                            <input
-                                type="email"
-                                id="email"
-                                className="border-b-2 border-black px-2 outline-none"
-                            />
-                        </div>
-                        <div className="my-6 flex flex-col">
-                            <label htmlFor="name" className="text-start">
-                                {t('form.name')}:
-                            </label>
-                            <input
-                                type="text"
-                                id="name"
-                                className="border-b-2 border-black px-2 outline-none"
-                            />
-                        </div>
-                        <div className="my-3 flex flex-col">
-                            <label htmlFor="description" className="text-start">
-                                {t('form.brief-description')}:
-                            </label>
-                            <textarea
-                                rows={5}
-                                id="description"
-                                className="rounded border-2 border-black px-2 py-1 outline-none"
-                            />
-                        </div>
-                        <div className="flex w-full items-center justify-center">
-                            <button className="flex items-center justify-center gap-2 rounded border-4 border-primary bg-primary px-5 py-2 font-bold text-white transition hover:scale-105 hover:bg-primary hover:text-white md:bg-white md:text-black">
-                                {t('form.send')}{' '}
-                                <span
-                                    className="inline-block"
-                                    dangerouslySetInnerHTML={{
-                                        __html: feather.icons.send.toSvg(),
-                                    }}></span>
-                            </button>
-                        </div>
-                    </form>
+                    <ContactForm
+                        fields={{
+                            email: t('form.email'),
+                            name: t('form.name'),
+                            description: t('form.brief-description'),
+                            button_waiting: t('form.button_waiting'),
+                            button_sent: t('form.button_sent'),
+                            form_success: t('form.success'),
+                            form_failure: t('form.failure'),
+                        }}
+                    />
                     <div className="mt-10 flex items-center justify-center md:m-0 md:mx-5 md:w-1/2">
                         <img
                             src="/assets/img/contact.png"

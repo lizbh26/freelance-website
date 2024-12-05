@@ -10,7 +10,10 @@
     "form.email": "Your email",
     "form.name": "Your name / company",
     "form.brief-description": "Briefly describe your project",
-    "form.send": "Send",
+    "form.button_waiting": "Send",
+    "form.button_sent": "Sending...",
+    "form.success": "Your message was registered correctly",
+    "form.failure": "There was an error, please try again",
 
     "other.email": "For more inquiries, you can contact"
 }
