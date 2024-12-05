@@ -26,11 +26,11 @@ export default function NavigationLinks({
                 href={`/${lang}`}>
                 {links.home}
             </a>
-            <a
+            {/* <a
                 className={`my-1 w-fit border-b-4 px-2 py-1 transition hover:border-b-primary md:my-0 md:px-0 md:py-2 ${page === '/about' ? 'border-b-primary' : 'border-b-white'}`}
                 href={`/${lang}/about`}>
                 {links.about}
-            </a>
+            </a> */}
             <a
                 className={`my-1 w-fit border-b-4 px-2 py-1 transition hover:border-b-primary md:my-0 md:px-0 md:py-2 ${page === '/services' ? 'border-b-primary' : 'border-b-white'}`}
                 href={`/${lang}/services`}>
