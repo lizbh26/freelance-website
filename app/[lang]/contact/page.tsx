@@ -28,36 +28,39 @@ export default async function ContactUs({
                 </h1>
             </header>
             <article className="px-5 py-6 text-center sm:px-10 md:px-20 lg:px-36">
-                <p className="mb-6 text-justify">{t('body.disclaimer')}</p>
                 <h3 className="text-xl">{t('form.title')}</h3>
-                <section className="mb-10 flex w-full items-center justify-center">
+                <section className="mb-10 mt-5 flex w-full flex-col items-center justify-center md:flex-row">
                     <form
                         action=""
-                        className="w-full sm:w-3/4 md:w-2/3 lg:w-1/2">
-                        <div className="my-3 flex flex-col">
-                            <label htmlFor="email">{t('form.email')}</label>
+                        className="w-full rounded-md border-2 border-gray-200 p-5 shadow-lg shadow-slate-600 sm:w-3/4 md:w-2/3 lg:w-1/2">
+                        <div className="mb-3 flex flex-col">
+                            <label htmlFor="email" className="text-start">
+                                {t('form.email')}:
+                            </label>
                             <input
                                 type="email"
                                 id="email"
-                                className="rounded border-2 border-black px-2"
+                                className="border-b-2 border-black px-2 outline-none"
                             />
                         </div>
-                        <div className="my-3 flex flex-col">
-                            <label htmlFor="name">{t('form.name')}</label>
+                        <div className="my-6 flex flex-col">
+                            <label htmlFor="name" className="text-start">
+                                {t('form.name')}:
+                            </label>
                             <input
                                 type="text"
                                 id="name"
-                                className="rounded border-2 border-black px-2"
+                                className="border-b-2 border-black px-2 outline-none"
                             />
                         </div>
                         <div className="my-3 flex flex-col">
-                            <label htmlFor="description">
-                                {t('form.brief-description')}
+                            <label htmlFor="description" className="text-start">
+                                {t('form.brief-description')}:
                             </label>
                             <textarea
                                 rows={5}
                                 id="description"
-                                className="rounded border-2 border-black px-2"
+                                className="rounded border-2 border-black px-2 py-1 outline-none"
                             />
                         </div>
                         <div className="flex w-full items-center justify-center">
@@ -71,7 +74,16 @@ export default async function ContactUs({
                             </button>
                         </div>
                     </form>
+                    <div className="mt-10 flex items-center justify-center md:m-0 md:mx-5 md:w-1/2">
+                        <img
+                            src="/assets/img/contact.png"
+                            width={300}
+                            height={300}
+                            className=""
+                        />
+                    </div>
                 </section>
+                <p className="mb-6 text-justify">{t('body.disclaimer')}</p>
                 <p>{t('other.email')} [email here]</p>
             </article>
         </main>
