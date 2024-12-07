@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { getTranslations } from '@/app/i18n';
 import ServiceList from './components/service_list';
+import { getAllServices } from './components/services_content';
 
 export async function generateMetadata({
     params: { lang },
@@ -14,11 +15,13 @@ export async function generateMetadata({
     };
 }
 
-export default function Services({
+export default async function Services({
     params: { lang },
 }: {
     params: { lang: string };
 }) {
+    const { t } = await getTranslations(lang, 'services');
+
     return (
         <main>
             <header className="flex bg-secondary pb-16 pt-36 md:px-20 lg:px-36">
@@ -27,8 +30,8 @@ export default function Services({
                 </h1>
             </header>
             <article className="px-5 py-10 sm:px-16 md:px-20 lg:px-36">
-                <section className="mb-10 mt-6">
-                    <ServiceList />
+                <section className="mb-16 mt-6">
+                    <ServiceList services={getAllServices(t)} />
                 </section>
                 <section className="mt-8">
                     <h2 className="text-2xl">

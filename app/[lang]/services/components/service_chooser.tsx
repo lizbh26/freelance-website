@@ -1,22 +1,24 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import feather from 'feather-icons';
-import { ServiceOption, service_options } from './services_content';
+import { ServiceOption } from './services_content';
+import { usePathname } from 'next/navigation';
 
 interface ServiceChooserProps {
+    options: ServiceOption[];
     selected: ServiceOption;
-    setSelected: (newSelected: ServiceOption) => void;
 }
 
 export default function ServiceChooser({
+    options,
     selected,
-    setSelected,
 }: ServiceChooserProps) {
     const [isShowing, setIsShowing] = useState(false);
+    const url = usePathname();
 
     return (
-        <div className="relative mb-8 flex w-4/5 flex-col items-center justify-center max-[360px]:w-full min-[550px]:w-1/2 md:mb-0 md:w-1/3 md:border-l-2 md:border-primary md:pl-2">
+        <div className="relative mb-8 flex w-4/5 flex-col items-center justify-center max-[360px]:w-full min-[550px]:w-1/2 md:mb-0 md:w-1/3 md:border-l-2 md:border-primary md:pl-2 lg:w-1/4">
             <button
                 id="service-dropdown"
                 onClick={() => setIsShowing(!isShowing)}
@@ -31,15 +33,18 @@ export default function ServiceChooser({
             <div
                 id="service-list"
                 className={`absolute top-12 flex w-full flex-col overflow-hidden rounded bg-white px-6 shadow transition-all md:relative md:top-0 md:max-h-max md:p-0 md:shadow-none ${isShowing ? 'max-h-80' : 'max-h-0'}`}>
-                {service_options.map((option) => (
+                {options.map((option) => (
                     <button
                         key={option.id}
                         id={option.id}
-                        className={`my-1 text-start transition-all ${selected === option ? 'cursor-default font-bold text-primary' : 'hover:pl-2 hover:text-primary'}`}
-                        onClick={() => {
-                            setSelected(option);
-                            setIsShowing(false);
-                        }}>
+                        className={`my-1 text-start transition-all ${selected.id === option.id ? 'cursor-default font-bold text-primary' : 'hover:pl-2 hover:text-primary'}`}
+                        onClick={() =>
+                            window.history.pushState(
+                                null,
+                                '',
+                                `${url}?selected=${option.id}`,
+                            )
+                        }>
                         {option.name}
                     </button>
                 ))}

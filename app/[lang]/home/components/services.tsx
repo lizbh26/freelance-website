@@ -17,8 +17,8 @@ export default async function Services({ lang }: { lang: string }) {
                 <Link
                     className="flex w-full flex-col items-center justify-center bg-neutral-200 py-4 transition hover:cursor-pointer hover:bg-neutral-300"
                     href={{
-                        pathname: '/services',
-                        query: { search: 'business_website' },
+                        pathname: `${lang}/services`,
+                        query: { selected: 'website' },
                     }}>
                     <Image
                         src="/assets/img/webpage_icon.png"
@@ -33,8 +33,8 @@ export default async function Services({ lang }: { lang: string }) {
                 <Link
                     className="flex w-full flex-col items-center justify-center bg-neutral-200 py-4 transition hover:cursor-pointer hover:bg-neutral-300"
                     href={{
-                        pathname: '/services',
-                        query: { search: 'ad_campaign' },
+                        pathname: `${lang}/services`,
+                        query: { selected: 'marketing' },
                     }}>
                     <Image
                         src="/assets/img/advertising.png"
@@ -49,8 +49,8 @@ export default async function Services({ lang }: { lang: string }) {
                 <Link
                     className="flex w-full flex-col items-center justify-center bg-neutral-200 py-4 transition hover:cursor-pointer hover:bg-neutral-300"
                     href={{
-                        pathname: '/services',
-                        query: { search: 'ecommerce' },
+                        pathname: `${lang}/services`,
+                        query: { selected: 'e-commerce' },
                     }}>
                     <Image
                         src="/assets/img/ecommerce.png"
