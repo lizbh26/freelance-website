@@ -52,7 +52,6 @@ export default async function ContactUs({
                     </div>
                 </section>
                 <p className="mb-6 text-justify">{t('body.disclaimer')}</p>
-                <p>{t('other.email')} [email here]</p>
             </article>
         </main>
     );
