@@ -1,4 +1,6 @@
 'use client';
+import Image from 'next/image';
+
 import MobileNavigationMenu from './mobileNavMenu';
 import NavigationLinks, { LinksTexts } from './navLinks';
 import LanguagePicker from './languagePicker';
@@ -36,7 +38,7 @@ export default function Navbar({
                 <a
                     className="flex items-center justify-center gap-2 text-xl text-primary"
                     href={`/${lang}`}>
-                    <img src="/assets/img/logo.png" alt="" className="w-8" />
+                    <Image src="/assets/img/logo.png" alt="" className="w-8" />
                     Digital Obelisk
                 </a>
                 <div className="flex items-center gap-6">

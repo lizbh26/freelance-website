@@ -1,5 +1,6 @@
 import { getTranslations } from '@/app/i18n';
 import ChangingAdjectives from './changingAdjectives';
+import Image from 'next/image';
 
 export default async function AboutUs({ lang }: { lang: string }) {
     const { t } = await getTranslations(lang, 'home');
@@ -26,8 +27,9 @@ export default async function AboutUs({ lang }: { lang: string }) {
                     </span>
                 </div>
                 <div className="mt-8 flex items-center justify-center px-4 lg:w-2/5 xl:w-1/2">
-                    <img
+                    <Image
                         className="object-cover"
+                        alt="Working together"
                         width={400}
                         height={300}
                         src="/assets/img/teamwork.png"

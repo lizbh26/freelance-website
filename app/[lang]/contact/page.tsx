@@ -1,5 +1,7 @@
-import feather from 'feather-icons';
 import { Metadata } from 'next';
+import Image from 'next/image';
+import { Suspense } from 'react';
+
 import { getTranslations } from '@/app/i18n';
 import ContactForm from './contact_form';
 
@@ -31,20 +33,23 @@ export default async function ContactUs({
             <article className="px-5 py-6 text-center sm:px-10 md:px-20 lg:px-36">
                 <h3 className="text-xl">{t('form.title')}</h3>
                 <section className="mb-10 mt-5 flex w-full flex-col items-center justify-center md:flex-row">
-                    <ContactForm
-                        fields={{
-                            email: t('form.email'),
-                            name: t('form.name'),
-                            description: t('form.brief-description'),
-                            button_waiting: t('form.button_waiting'),
-                            button_sent: t('form.button_sent'),
-                            form_success: t('form.success'),
-                            form_failure: t('form.failure'),
-                        }}
-                    />
+                    <Suspense>
+                        <ContactForm
+                            fields={{
+                                email: t('form.email'),
+                                name: t('form.name'),
+                                description: t('form.brief-description'),
+                                button_waiting: t('form.button_waiting'),
+                                button_sent: t('form.button_sent'),
+                                form_success: t('form.success'),
+                                form_failure: t('form.failure'),
+                            }}
+                        />
+                    </Suspense>
                     <div className="mt-10 flex items-center justify-center md:m-0 md:mx-5 md:w-1/2">
-                        <img
+                        <Image
                             src="/assets/img/contact.png"
+                            alt="Contact us with this form"
                             width={300}
                             height={300}
                             className=""

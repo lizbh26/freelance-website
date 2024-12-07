@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { getTranslations } from '@/app/i18n';
 import ServiceList from './components/service_list';
 import { getAllServices } from './components/services_content';
+import { Suspense } from 'react';
 
 export async function generateMetadata({
     params: { lang },
@@ -31,7 +32,9 @@ export default async function Services({
             </header>
             <article className="px-5 py-10 sm:px-16 md:px-20 lg:px-36">
                 <section className="mb-16 mt-6">
-                    <ServiceList services={getAllServices(t)} />
+                    <Suspense>
+                        <ServiceList services={getAllServices(t)} />
+                    </Suspense>
                 </section>
                 <section className="mt-8">
                     <h2 className="text-2xl">
