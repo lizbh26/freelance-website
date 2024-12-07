@@ -5,6 +5,7 @@ import { Service, ServiceOption, ServicesIDs } from './services_content';
 import { redirect, usePathname, useSearchParams } from 'next/navigation';
 
 export default function ServiceList({ services }: { services: Service[] }) {
+    const pathname = usePathname();
     const searchParams = useSearchParams();
     const selectedID = searchParams.get('selected');
 
@@ -13,7 +14,7 @@ export default function ServiceList({ services }: { services: Service[] }) {
     )?.title;
 
     if (!selectedID || !selectedName)
-        redirect(`${usePathname()}?selected=${ServicesIDs[0]}`);
+        redirect(`${pathname}?selected=${ServicesIDs[0]}`);
 
     return (
         <div className="flex flex-col items-center justify-center md:flex-row-reverse md:items-start md:justify-start">
