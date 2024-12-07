@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import feather from 'feather-icons';
 import { ServiceOption } from './services_content';
-import { usePathname } from 'next/navigation';
 
 interface ServiceChooserProps {
     options: ServiceOption[];
@@ -15,7 +14,6 @@ export default function ServiceChooser({
     selected,
 }: ServiceChooserProps) {
     const [isShowing, setIsShowing] = useState(false);
-    const url = usePathname();
 
     return (
         <div className="relative mb-8 flex w-4/5 flex-col items-center justify-center max-[360px]:w-full min-[550px]:w-1/2 md:mb-0 md:w-1/3 md:border-l-2 md:border-primary md:pl-2 lg:w-1/4">
@@ -38,13 +36,14 @@ export default function ServiceChooser({
                         key={option.id}
                         id={option.id}
                         className={`my-1 text-start transition-all ${selected.id === option.id ? 'cursor-default font-bold text-primary' : 'hover:pl-2 hover:text-primary'}`}
-                        onClick={() =>
+                        onClick={() => {
+                            setIsShowing(false);
                             window.history.pushState(
                                 null,
                                 '',
-                                `${url}?selected=${option.id}`,
-                            )
-                        }>
+                                `?selected=${option.id}`,
+                            );
+                        }}>
                         {option.name}
                     </button>
                 ))}
