@@ -1,14 +1,15 @@
 import { Metadata } from 'next';
-import { getTranslations } from '@/app/i18n';
+import { getTranslations, Params } from '@/app/i18n';
 import ServiceList from './components/service_list';
 import { getAllServices } from './components/services_content';
 import { Suspense } from 'react';
 
 export async function generateMetadata({
-    params: { lang },
+    params,
 }: {
-    params: { lang: string };
+    params: Params;
 }): Promise<Metadata> {
+    const { lang } = await params;
     const { t } = await getTranslations(lang, 'services');
     return {
         title: t('meta.title'),
@@ -16,11 +17,8 @@ export async function generateMetadata({
     };
 }
 
-export default async function Services({
-    params: { lang },
-}: {
-    params: { lang: string };
-}) {
+export default async function Services({ params }: { params: Params }) {
+    const { lang } = await params;
     const { t } = await getTranslations(lang, 'services');
 
     return (

@@ -5,7 +5,7 @@ import './globals.css';
 
 import Navbar from './components/navbar';
 import Footer from './components/footer/footer';
-import { getTranslations } from '../i18n';
+import { getTranslations, Params } from '../i18n';
 
 export async function generateStaticParams() {
     return languages.map((lang) => ({ lang }));
@@ -15,11 +15,12 @@ const inter = Inter({ subsets: ['latin'] });
 
 export default async function RootLayout({
     children,
-    params: { lang },
+    params,
 }: Readonly<{
     children: React.ReactNode;
-    params: { lang: string };
+    params: Params;
 }>) {
+    const { lang } = await params;
     const { t: tNav } = await getTranslations(lang, 'navbar');
 
     return (

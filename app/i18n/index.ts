@@ -27,3 +27,5 @@ export async function getTranslations(lang: string, namespace: string) {
         i18n: i18nextInstance,
     };
 }
+
+export type Params = Promise<{ lang: string }>;

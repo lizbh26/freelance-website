@@ -1,13 +1,14 @@
 import { Metadata } from 'next';
-import { getTranslations } from '../i18n';
+import { getTranslations, Params } from '../i18n';
 
 import Home from './home';
 
 export async function generateMetadata({
-    params: { lang },
+    params,
 }: {
-    params: { lang: string };
+    params: Params;
 }): Promise<Metadata> {
+    const { lang } = await params;
     const { t } = await getTranslations(lang, 'home');
     return {
         title: t('meta.title'),
@@ -15,10 +16,7 @@ export async function generateMetadata({
     };
 }
 
-export default function Main({
-    params: { lang },
-}: {
-    params: { lang: string };
-}) {
+export default async function Main({ params }: { params: Params }) {
+    const { lang } = await params;
     return <Home lang={lang} />;
 }

@@ -2,14 +2,15 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import { Suspense } from 'react';
 
-import { getTranslations } from '@/app/i18n';
+import { getTranslations, Params } from '@/app/i18n';
 import ContactForm from './contact_form';
 
 export async function generateMetadata({
-    params: { lang },
+    params,
 }: {
-    params: { lang: string };
+    params: Params;
 }): Promise<Metadata> {
+    const { lang } = await params;
     const { t } = await getTranslations(lang, 'contact');
     return {
         title: t('meta.title'),
@@ -17,11 +18,8 @@ export async function generateMetadata({
     };
 }
 
-export default async function ContactUs({
-    params: { lang },
-}: {
-    params: { lang: string };
-}) {
+export default async function ContactUs({ params }: { params: Params }) {
+    const { lang } = await params;
     const { t } = await getTranslations(lang, 'contact');
     return (
         <main>

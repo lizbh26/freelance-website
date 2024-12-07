@@ -38,7 +38,12 @@ export default function Navbar({
                 <a
                     className="flex items-center justify-center gap-2 text-xl text-primary"
                     href={`/${lang}`}>
-                    <Image src="/assets/img/logo.png" alt="" className="w-8" />
+                    <Image
+                        src="/assets/img/logo.png"
+                        alt=""
+                        width={32}
+                        height={32}
+                    />
                     Digital Obelisk
                 </a>
                 <div className="flex items-center gap-6">
