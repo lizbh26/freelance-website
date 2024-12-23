@@ -31,12 +31,13 @@ function TypewriterBlock({
 
     useEffect(() => {
         const minimumDistance = Math.min(300, window?.innerHeight);
-        if (distanceFromTop && distanceFromTop < minimumDistance)
+        if (distanceFromTop && distanceFromTop < minimumDistance) {
             setCanBegin(true);
+        }
     }, [distanceFromTop]);
 
     useEffect(() => {
-        if (!ref.current) return;
+        if (!ref || !ref.current) return;
 
         setDistanceFromTop(ref.current.getBoundingClientRect().top);
 
@@ -48,7 +49,7 @@ function TypewriterBlock({
 
         window.addEventListener('scroll', handleScroll, { passive: true });
         return () => window.removeEventListener('scroll', handleScroll);
-    }, [ref.current]);
+    }, [ref]);
 
     return (
         <span id="changing-adjective" className="inline-block">
