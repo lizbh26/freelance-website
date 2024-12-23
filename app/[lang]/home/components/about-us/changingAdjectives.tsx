@@ -1,6 +1,5 @@
 'use client';
 import { RefObject, useEffect, useRef, useState } from 'react';
-import { useInViewport } from 'react-in-viewport';
 import Typewriter from 'typewriter-effect';
 
 export default function ChangingAdjectives({ subtitle }: { subtitle: string }) {
@@ -9,23 +8,13 @@ export default function ChangingAdjectives({ subtitle }: { subtitle: string }) {
     const displayStrings = subtitle.split(';');
     const we_are = displayStrings.splice(0, 1)[0];
 
-    function refIsNotNull(
-        ref: RefObject<HTMLElement | null>,
-    ): ref is RefObject<HTMLElement> {
-        return ref !== null;
-    }
-
     return (
-        <div className="" ref={typewriterRef}>
+        <div className="" id="typewriter-wrapper" ref={typewriterRef}>
             {we_are}{' '}
-            {refIsNotNull(typewriterRef) ? (
-                <TypewriterBlock
-                    ref={typewriterRef}
-                    displayStrings={displayStrings}
-                />
-            ) : (
-                <></>
-            )}
+            <TypewriterBlock
+                ref={typewriterRef}
+                displayStrings={displayStrings}
+            />
         </div>
     );
 }
@@ -34,23 +23,41 @@ function TypewriterBlock({
     ref,
     displayStrings,
 }: {
-    ref: RefObject<HTMLElement>;
+    ref: RefObject<HTMLElement | null>;
     displayStrings: string[];
 }) {
-    const { inViewport } = useInViewport(ref);
     const [canBegin, setCanBegin] = useState(false);
+    const [distanceFromTop, setDistanceFromTop] = useState<number | null>(null);
 
     useEffect(() => {
-        if (inViewport) setCanBegin(true);
-    }, [inViewport]);
+        const minimumDistance = Math.min(300, window?.innerHeight);
+        if (distanceFromTop && distanceFromTop < minimumDistance)
+            setCanBegin(true);
+    }, [distanceFromTop]);
+
+    useEffect(() => {
+        if (!ref.current) return;
+
+        setDistanceFromTop(ref.current.getBoundingClientRect().top);
+
+        function handleScroll() {
+            if (ref.current) {
+                setDistanceFromTop(ref.current.getBoundingClientRect().top);
+            }
+        }
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [ref.current]);
 
     return (
         <span id="changing-adjective" className="inline-block">
             {canBegin ? (
                 <Typewriter
                     onInit={(typewriter) => {
+                        typewriter.changeDelay(80);
                         displayStrings.forEach((str, i) => {
-                            typewriter.typeString(str).pauseFor(500);
+                            typewriter.typeString(str).pauseFor(400);
                             if (i != displayStrings.length - 1)
                                 typewriter.deleteAll();
                         });
