@@ -25,27 +25,23 @@ export default async function Services({ params }: { params: Params }) {
         <main>
             <header className="flex bg-secondary pb-16 pt-36 md:px-20 lg:px-36">
                 <h1 className="w-full text-center text-4xl font-bold text-black">
-                    Services
+                    {t('header.title')}
                 </h1>
             </header>
             <article className="px-5 py-10 sm:px-16 md:px-20 lg:px-36">
-                <section className="mb-16 mt-6">
-                    <Suspense>
-                        <ServiceList services={getAllServices(t)} />
-                    </Suspense>
-                </section>
-                <section className="mt-8">
-                    <h2 className="text-2xl">
-                        Did any of these catch your eye?
-                    </h2>
+                <Suspense>
+                    <ServiceList services={getAllServices(t)} />
+                </Suspense>
+                <section className="mt-12 text-justify sm:text-center">
+                    <h2 className="text-2xl font-bold">{t('cta.title')}</h2>
                     <p>
-                        If so, you can{' '}
+                        {t('cta.body-1')}{' '}
                         <a
-                            className="text-primary transition hover:underline"
+                            className="text-primary underline transition md:no-underline md:hover:underline"
                             href={`/${lang}/contact`}>
-                            schedule a free consultation
+                            {t('cta.body-link')}
                         </a>{' '}
-                        where we can assess what your business may benefit from.
+                        {t('cta.body-2')}
                     </p>
                 </section>
             </article>
