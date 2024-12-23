@@ -76,8 +76,8 @@ export default async function Services({ lang }: { lang: string }) {
                 <p>
                     {t('services.pre-link')}{' '}
                     <a
-                        className="underline transition hover:text-primary"
-                        href={`/${lang}/services`}>
+                        className="text-primary underline transition hover:text-primary md:text-black"
+                        href={`/${lang}/services?selected=website`}>
                         {t('services.link')}
                     </a>
                 </p>
