@@ -44,7 +44,7 @@ export default function Navbar({
                         width={32}
                         height={32}
                     />
-                    Digital Obelisk
+                    The Digital Obelisk
                 </a>
                 <div className="flex items-center gap-6">
                     <div className="hidden items-center gap-4 md:flex">

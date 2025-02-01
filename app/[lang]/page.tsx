@@ -11,7 +11,7 @@ export async function generateMetadata({
     const { lang } = await params;
     const { t } = await getTranslations(lang, 'home');
     return {
-        title: t('meta.title'),
+        title: t('meta.title') + ' | The Digital Obelisk',
         description: t('meta.description'),
     };
 }
