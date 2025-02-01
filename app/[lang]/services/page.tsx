@@ -32,7 +32,7 @@ export default async function Services({ params }: { params: Params }) {
                 <Suspense>
                     <ServiceList services={getAllServices(t)} />
                 </Suspense>
-                <section className="mt-12 text-justify sm:text-center">
+                <section className="mt-12 text-center">
                     <h2 className="text-2xl font-bold">{t('cta.title')}</h2>
                     <p>
                         {t('cta.body-1')}{' '}

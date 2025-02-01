@@ -48,7 +48,7 @@ export default function ServiceChooser({
     return (
         <div
             ref={thisRef}
-            className="relative mb-8 flex w-4/5 flex-col items-center justify-center max-[360px]:w-full min-[550px]:w-1/2 md:mb-0 md:w-1/3 md:border-l-2 md:border-primary md:pl-2 lg:w-1/4">
+            className="relative mb-8 flex w-4/5 flex-col items-center justify-center text-nowrap max-[360px]:w-full min-[550px]:w-1/2 md:mb-0 md:w-min md:border-l-2 md:border-primary md:pl-2">
             <button
                 id="service-dropdown"
                 onClick={(e: React.MouseEvent<HTMLButtonElement>) => {
@@ -73,7 +73,7 @@ export default function ServiceChooser({
                     <button
                         key={option.id}
                         id={option.id}
-                        className={`my-1 text-start transition-all ${selected.id === option.id ? 'cursor-default font-bold text-primary' : 'hover:text-primary md:hover:pl-2'}`}
+                        className={`my-1 text-start transition-all md:pr-2 ${selected.id === option.id ? 'cursor-default font-bold text-primary' : 'hover:text-primary md:hover:pl-2 md:hover:pr-0'}`}
                         onClick={() => {
                             setIsShowing(false);
                             setDropdownHeight(0);

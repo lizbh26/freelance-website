@@ -77,7 +77,7 @@ export default function ContactForm({ fields }: { fields: FieldNames }) {
     return (
         <form
             onSubmit={(e) => handleSubmit(e)}
-            className="w-full rounded-md border-2 border-gray-200 p-5 shadow-lg shadow-slate-600 transition-all sm:w-3/4 md:w-2/3 lg:w-1/2">
+            className="w-full rounded-md p-5 shadow-lg shadow-slate-600 transition-all sm:w-3/4 md:w-2/3 lg:w-1/2">
             {submitStatus == 'success' || submitStatus == 'failure' ? (
                 <div className="mb-6 flex w-full items-center justify-center">
                     <button

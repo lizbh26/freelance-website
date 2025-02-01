@@ -17,8 +17,8 @@ export default function ServiceList({ services }: { services: Service[] }) {
         redirect(`${pathname}?selected=${ServicesIDs[0]}`);
 
     return (
-        <section className="rounded-md border-2 border-gray-100 px-10 py-8 shadow-md md:py-16">
-            <div className="flex flex-col items-center justify-center md:flex-row-reverse md:justify-start">
+        <section className="rounded-md px-10 py-8 shadow-lg shadow-slate-600 md:py-12">
+            <div className="flex flex-col items-center justify-center md:flex-row-reverse md:items-start md:justify-start">
                 <ServiceChooser
                     options={services.map((service) => {
                         return {
@@ -28,7 +28,7 @@ export default function ServiceList({ services }: { services: Service[] }) {
                     })}
                     selected={{ id: selectedID, name: selectedName }}
                 />
-                <div className="md:w-2/3 md:pr-4 lg:w-3/4">
+                <div className="w-full md:pr-4">
                     {services.map((service) => (
                         <section
                             id={service.id}
