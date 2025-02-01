@@ -4,33 +4,41 @@
 
     "header.title": "Servicios",
 
-    "services.website.title": "Business Websites",
-    "services.website.tagline": "Your own digital hub",
-    "services.website.option": "Business websites",
-    "services.website.body": "<p>By owning your own website, you take a step that almost no small business owners do: taking control of the conversation. </p><p>And when you own the conversation, you don't have to battle with other brands for the attention of potential customers, like in social media; and you can control with precision how users interact with your brand and with your products.</p>",
+    "services.price-range-tag": "Rango de precios: ",
 
-    "services.seo.title": "Search Engine Optimization (SEO)",
-    "services.seo.tagline": "Be the first on the search results",
-    "services.seo.option": "Marketing campaigns",
-    "services.seo.body": "<p>One of the most prevalent ways people discover brands is by googling them, and most if not everybody never go past the first page of results (including us!), so making sure you appear near the top is imperative to make your brand grow</p>",
 
-    "services.marketing.title": "Digital marketing campaings",
-    "services.marketing.tagline": "For clients to buy from you, <br /> they have to know you are an option!",
-    "services.marketing.option": "SEO",
-    "services.marketing.body": "<p> Unlike traditional marketing (think of billboards or TV ads), we can target digital ads to exactly the people that are most likely to buy from you, so you dont have to pay nearly as much for even better results </p>",
+    "services.website.title": "Páginas web para negocios",
+    "services.website.price-range": "$2,000 - $6,000 MXN",
+    "services.website.tagline": "Tu propio espacio digital",
+    "services.website.option": "Páginas web",
+    "services.website.body": "<p>Desde sitios informativas hasta aplicaciones web, una página web te brinda un espacio accesible para todos con una conexión a internet en el que puedes destacar tu negocio sin preocuparte de la competencia.</p><p>Así mismo, si ya cuentas con una página web, nosotros la podemos mejorar para que sea optima para los buscadores web, y aparezca en primer lugar (SEO).</p>",
 
-    "services.social-media.title": "Social media management",
-    "services.social-media.tagline": "Appear on everybody's feeds",
-    "services.social-media.option": "Social media management",
-    "services.social-media.body": "<p>In today's age, people crave connections and authenticity, things that brands without social outreach or an overly corporate approach can hardly cultivate.</p><p>By thinking of your clients and their needs before their money, our promotions build loyalty within your customers and make new ones more likely to buy.</p>",
+    "services.mobile.title": "Aplicaciones web y móviles",
+    "services.mobile.price-range": "$6,000 - $10,000 MXN",
+    "services.mobile.tagline": "Extiende tu negocio a los bolsillos de tus clientes",
+    "services.mobile.option": "Aplicaciones",
+    "services.mobile.body": "<p>A medida que tu negocio crece, tus clientes tienen más necesidades que una simple página web no puede cubrir. Por esto, una aplicación más compleja puede ser el siguiente nivel en tu presencia digital.</p>",
 
-    "services.content-writing.title": "Content writing",
-    "services.content-writing.tagline": "Can't post anything if you've got nothing to post",
-    "services.content-writing.option": "Content writing",
-    "services.content-writing.body": "",
+    "services.marketing.title": "Campañas de anuncios y marketing digital",
+    "services.marketing.price-range": "$500 - $2,000 MXN por campaña",
+    "services.marketing.tagline": "¡Para que tus productos se vendan, <br /> tus clientes te tienen que conocer!",
+    "services.marketing.option": "Marketing",
+    "services.marketing.body": "<p> Con anuncios digitales, podemos usar algoritmos especializados para dirigirnos hacia las personas que tengan la mayor probabilidad de convertirse en clientes, proporcionando mejor uso de tu dinero que formas tradicionales de anunciarse.</p>",
 
-    "services.e-commerce.title": "Custom e-Commerce solutions",
-    "services.e-commerce.tagline": "Let your products reach anyone in the world",
-    "services.e-commerce.option": "e-Commerce solutions",
-    "services.e-commerce.body":"<p>From outrageous tariffs to oversaturated markets, many times the \"free\" marketplaces don't fit your business needs. This is why custom marketplaces can be so powerful: you get the advantages of having your own website (controling the conversation) and offering your product or service online (worldwide reach)</p>"
+    "services.social-media.title": "Administración de redes sociales",
+    "services.social-media.price-range": "$400 - $1500 MXN por perfil por mes",
+    "services.social-media.tagline": "Conecta con tus clientes",
+    "services.social-media.option": "Redes sociales",
+    "services.social-media.body": "<p>Para mantener a un cliente, no solo basta tener un buen producto sino tambien proporcionale la mejor experiencia posible. Con una buena presencia en redes sociales, puedes asegurar que las personas piensen en tí cuando necesiten comprar algo.</p>",
+
+    "services.e-commerce.title": "Soluciones e-Commerce privadas",
+    "services.e-commerce.price-range": "$5,000 - $15,000 MXN",
+    "services.e-commerce.tagline": "Haz que tus productos se vendan en todo el mundo",
+    "services.e-commerce.option": "e-Commerce",
+    "services.e-commerce.body":"<p>Desde precios de entrada gigantes a mercados sobresaturados, muchas veces los mercados \"gratis\" hacen que pierdas oportunidades de venta valiosas.</p><p>Son por estas razones por las que tener un mercado privado es tan poderoso: te diferencía enormemente de tus competidores y te permite convertir a más visitantes en clientes.</p>",
+
+    "cta.title": "¿Te interesó alguno?",
+    "cta.body-1": "Si es así, entonces puedes",
+    "cta.body-link": "agendar una cotización gratis",
+    "cta.body-2": "para que podamos identificar lo que tu negocio necesita."
 }

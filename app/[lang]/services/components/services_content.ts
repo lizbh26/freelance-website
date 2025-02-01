@@ -7,6 +7,7 @@ export type ServiceOption = {
 
 export type Service = {
     id: ServiceID;
+    price_range: string;
     title: string;
     tagline: string;
     option: string;
@@ -15,10 +16,9 @@ export type Service = {
 
 export const ServicesIDs = [
     'website',
-    'seo',
+    'mobile',
     'marketing',
     'social-media',
-    'content-writing',
     'e-commerce',
 ] as const;
 
@@ -31,6 +31,8 @@ export function getAllServices(t: TFunction<any, undefined>): Service[] {
         services.push({
             id: id,
             title: t(`services.${id}.title`),
+            price_range:
+                t(`services.price-range-tag`) + t(`services.${id}.price-range`),
             tagline: t(`services.${id}.tagline`),
             option: t(`services.${id}.option`),
             body: t(`services.${id}.body`),

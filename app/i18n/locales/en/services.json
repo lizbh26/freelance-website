@@ -4,33 +4,40 @@
 
     "header.title": "Services",
 
+    "services.price-range-tag": "Price range: ",
+
     "services.website.title": "Business Websites",
+    "services.website.price-range": "$100 - $600 USD",
     "services.website.tagline": "Your own digital hub",
-    "services.website.option": "Business websites",
+    "services.website.option": "Websites",
     "services.website.body": "<p>By owning your own website, you take a step that almost no small business owners do: taking control of the conversation. </p><p>And when you own the conversation, you don't have to battle with other brands for the attention of potential customers, like in social media; and you can control with precision how users interact with your brand and with your products.</p>",
 
-    "services.seo.title": "Search Engine Optimization (SEO)",
-    "services.seo.tagline": "Be the first on the search results",
-    "services.seo.option": "Marketing campaigns",
-    "services.seo.body": "<p>One of the most prevalent ways people discover brands is by googling them, and most if not everybody never go past the first page of results (including us!), so making sure you appear near the top is imperative to make your brand grow</p>",
+    "services.mobile.title": "Mobile and Web apps",
+    "services.mobile.price-range": "$600 - $3000 USD",
+    "services.mobile.tagline": "Place your business in the pockets of your clients",
+    "services.mobile.option": "Apps",
+    "services.mobile.body": "<p>One of the most prevalent ways people discover brands is by googling them, and most if not everybody never go past the first page of results (including us!), so making sure you appear near the top is imperative to make your brand grow</p>",
 
-    "services.marketing.title": "Digital marketing campaings",
+    "services.marketing.title": "Digital marketing and ad campaings",
+    "services.marketing.price-range": "$50 - $200 USD per campaign",
     "services.marketing.tagline": "For clients to buy from you, <br /> they have to know you are an option!",
-    "services.marketing.option": "SEO",
+    "services.marketing.option": "Marketing",
     "services.marketing.body": "<p> Unlike traditional marketing (think of billboards or TV ads), we can target digital ads to exactly the people that are most likely to buy from you, so you dont have to pay nearly as much for even better results </p>",
 
     "services.social-media.title": "Social media management",
-    "services.social-media.tagline": "Appear on everybody's feeds",
-    "services.social-media.option": "Social media management",
+    "services.social-media.price-range": "$30 - $150 USD per profile per month",
+    "services.social-media.tagline": "Connect with your clients",
+    "services.social-media.option": "Social media",
     "services.social-media.body": "<p>In today's age, people crave connections and authenticity, things that brands without social outreach or an overly corporate approach can hardly cultivate.</p><p>By thinking of your clients and their needs before their money, our promotions build loyalty within your customers and make new ones more likely to buy.</p>",
 
-    "services.content-writing.title": "Content writing",
-    "services.content-writing.tagline": "Can't post anything if you've got nothing to post",
-    "services.content-writing.option": "Content writing",
-    "services.content-writing.body": "",
-
     "services.e-commerce.title": "Custom e-Commerce solutions",
+    "services.e-commerce.price-range": "$1000 - $4500 USD",
     "services.e-commerce.tagline": "Let your products reach anyone in the world",
-    "services.e-commerce.option": "e-Commerce solutions",
-    "services.e-commerce.body":"<p>From outrageous tariffs to oversaturated markets, many times the \"free\" marketplaces don't fit your business needs. This is why custom marketplaces can be so powerful: you get the advantages of having your own website (controling the conversation) and offering your product or service online (worldwide reach)</p>"
+    "services.e-commerce.option": "e-Commerce",
+    "services.e-commerce.body":"<p>From outrageous tariffs to oversaturated markets, many times the \"free\" marketplaces don't fit your business needs. This is why custom marketplaces can be so powerful: you get the advantages of having your own website (controling the conversation) and offering your product or service online (worldwide reach)</p>",
+
+    "cta.title": "Did any of these catch your eye?",
+    "cta.body-1": "If so, you can",
+    "cta.body-link": "schedule a free consultation",
+    "cta.body-2": "where we can assess what your business may benefit from."
 }
