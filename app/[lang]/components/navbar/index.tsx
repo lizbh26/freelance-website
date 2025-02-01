@@ -20,7 +20,7 @@ export default function Navbar({
             const currentPosition = window.scrollY;
 
             if (prevPosition > currentPosition) setIsShowing(true);
-            else setIsShowing(false);
+            else if (prevPosition + 10 < currentPosition) setIsShowing(false);
 
             setPrevPosition(currentPosition);
         }
