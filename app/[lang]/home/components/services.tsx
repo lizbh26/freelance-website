@@ -22,7 +22,7 @@ export default async function Services({ lang }: { lang: string }) {
                     }}>
                     <Image
                         src="/assets/img/webpage_icon.png"
-                        alt="Website icon"
+                        alt={t('services.website')}
                         width={150}
                         height={150}
                     />
@@ -38,7 +38,7 @@ export default async function Services({ lang }: { lang: string }) {
                     }}>
                     <Image
                         src="/assets/img/advertising.png"
-                        alt="Advertising icon"
+                        alt={t('services.marketing')}
                         width={150}
                         height={150}
                     />
@@ -54,7 +54,7 @@ export default async function Services({ lang }: { lang: string }) {
                     }}>
                     <Image
                         src="/assets/img/ecommerce.png"
-                        alt="e-Commerce icon"
+                        alt={t('services.e-commerce')}
                         width={150}
                         height={150}
                     />
