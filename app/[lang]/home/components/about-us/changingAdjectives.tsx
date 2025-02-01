@@ -6,11 +6,9 @@ export default function ChangingAdjectives({ subtitle }: { subtitle: string }) {
     const typewriterRef = useRef<HTMLDivElement>(null);
 
     const displayStrings = subtitle.split(';');
-    const we_are = displayStrings.splice(0, 1)[0];
 
     return (
         <div className="" id="typewriter-wrapper" ref={typewriterRef}>
-            {we_are}{' '}
             <TypewriterBlock
                 ref={typewriterRef}
                 displayStrings={displayStrings}
@@ -56,11 +54,15 @@ function TypewriterBlock({
             {canBegin ? (
                 <Typewriter
                     onInit={(typewriter) => {
-                        typewriter.changeDelay(80);
+                        typewriter.changeDelay(60);
+                        typewriter.changeDeleteSpeed(30);
                         displayStrings.forEach((str, i) => {
-                            typewriter.typeString(str).pauseFor(400);
-                            if (i != displayStrings.length - 1)
-                                typewriter.deleteAll();
+                            typewriter.typeString(str);
+                            if (i != displayStrings.length - 1 && i != 0) {
+                                typewriter.pauseFor(400);
+                                typewriter.deleteChars(str.length);
+                                typewriter.pauseFor(100);
+                            }
                         });
                         typewriter.start();
                     }}
