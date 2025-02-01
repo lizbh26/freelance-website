@@ -65,7 +65,7 @@ export default async function Services({ lang }: { lang: string }) {
             </div>
             <div className="text-center">
                 <p>{t('services.and-more')}</p>
-                <div className="mb-1 mt-5 flex items-center justify-center gap-2">
+                <div className="mb-1 mt-5 flex flex-col items-center justify-center max-[360px]:mb-4 min-[360px]:flex-row min-[360px]:gap-2">
                     <p>{t('services.pre-cta')}</p>
                     <a
                         href={`/${lang}/contact`}

@@ -32,7 +32,9 @@ export function getAllServices(t: TFunction<any, undefined>): Service[] {
             id: id,
             title: t(`services.${id}.title`),
             price_range:
-                t(`services.price-range-tag`) + t(`services.${id}.price-range`),
+                t(`services.price-range-tag`) +
+                "<br class='min-[400px]:hidden'>" +
+                t(`services.${id}.price-range`),
             tagline: t(`services.${id}.tagline`),
             option: t(`services.${id}.option`),
             body: t(`services.${id}.body`),
