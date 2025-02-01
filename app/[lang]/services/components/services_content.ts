@@ -9,7 +9,6 @@ export type Service = {
     id: ServiceID;
     price_range: string;
     title: string;
-    tagline: string;
     option: string;
     body: string;
 };
@@ -35,7 +34,6 @@ export function getAllServices(t: TFunction<any, undefined>): Service[] {
                 t(`services.price-range-tag`) +
                 "<br class='min-[400px]:hidden'>" +
                 t(`services.${id}.price-range`),
-            tagline: t(`services.${id}.tagline`),
             option: t(`services.${id}.option`),
             body: t(`services.${id}.body`),
         }),

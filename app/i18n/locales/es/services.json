@@ -6,36 +6,30 @@
 
     "services.price-range-tag": "Rango de precios: ",
 
-
-    "services.website.title": "Páginas web para negocios",
+    "services.website.title": "Páginas web y sitios informativos",
     "services.website.price-range": "$2,000 - $6,000 MXN",
-    "services.website.tagline": "Tu propio espacio digital",
     "services.website.option": "Páginas web",
-    "services.website.body": "<p>Desde sitios informativas hasta aplicaciones web, una página web te brinda un espacio accesible para todos con una conexión a internet en el que puedes destacar tu negocio sin preocuparte de la competencia.</p><p>Así mismo, si ya cuentas con una página web, nosotros la podemos mejorar para que sea optima para los buscadores web, y aparezca en primer lugar (SEO).</p>",
+    "services.website.body": "<p>Una página web te brinda un espacio propio en el cuál puedes destacar tu negocio sin preocuparte de competir por atención con otras marcas.</p><p>Así mismo, si ya cuentas con una página web, nosotros la podemos optimizar para los buscadores web (SEO por sus siglas en inglés), y lograr que aparezca en los primeros lugares de una búsqueda web.</p>",
 
     "services.mobile.title": "Aplicaciones web y móviles",
-    "services.mobile.price-range": "$6,000 - $10,000 MXN",
-    "services.mobile.tagline": "Extiende tu negocio a los bolsillos de tus clientes",
+    "services.mobile.price-range": "$6,000 - $20,000 MXN",
     "services.mobile.option": "Aplicaciones",
-    "services.mobile.body": "<p>A medida que tu negocio crece, tus clientes tienen más necesidades que una simple página web no puede cubrir. Por esto, una aplicación más compleja puede ser el siguiente nivel en tu presencia digital.</p>",
+    "services.mobile.body": "<p>A medida que tu negocio crece, tus clientes tienen más necesidades que una simple página web no puede cubrir. Por esto, una solución más compleja cómo una aplicación puede ser el siguiente nivel en tu presencia digital.</p><p>Proveemos tanto aplicaciones móviles descargables desde Google Play o Apple Store, cómo aplicaciones web, un tipo de página web más sofisticada.</p>",
 
     "services.marketing.title": "Campañas de anuncios y marketing digital",
     "services.marketing.price-range": "$500 - $2,000 MXN por campaña",
-    "services.marketing.tagline": "¡Para que tus productos se vendan, <br /> tus clientes te tienen que conocer!",
     "services.marketing.option": "Marketing",
-    "services.marketing.body": "<p> Con anuncios digitales, podemos usar algoritmos especializados para dirigirnos hacia las personas que tengan la mayor probabilidad de convertirse en clientes, proporcionando mejor uso de tu dinero que formas tradicionales de anunciarse.</p>",
+    "services.marketing.body": "<p>Con anuncios digitales, podemos usar algoritmos especializados para dirigirnos hacia las personas con la mayor probabilidad de convertirse en clientes, proporcionandote un mejor uso de tu dinero comparado con las formas tradicionales de anunciarse (cómo anuncios de TV o periódicos).</p>",
 
     "services.social-media.title": "Administración de redes sociales",
     "services.social-media.price-range": "$400 - $1500 MXN por perfil por mes",
-    "services.social-media.tagline": "Conecta con tus clientes",
     "services.social-media.option": "Redes sociales",
-    "services.social-media.body": "<p>Para mantener a un cliente, no solo basta tener un buen producto sino tambien proporcionale la mejor experiencia posible. Con una buena presencia en redes sociales, puedes asegurar que las personas piensen en tí cuando necesiten comprar algo.</p>",
+    "services.social-media.body": "<span><p>Con una buena presencia en redes sociales, puedes asegurar que las personas piensen en tí cuando necesiten comprar algo, en vez de tu competencia. Nuestros servicios incluyen:</p> <ul class='list-disc list-inside'><li>Planeación de estrategias publicitarias que impulsen la presencia de la marca.</li><li>Creación de contenido gráfico y textual.</li><li>Representación de la marca en mensajes y comentarios.</li></ul></span>",
 
     "services.e-commerce.title": "Soluciones e-Commerce privadas",
     "services.e-commerce.price-range": "$5,000 - $15,000 MXN",
-    "services.e-commerce.tagline": "Haz que tus productos se vendan en todo el mundo",
     "services.e-commerce.option": "e-Commerce",
-    "services.e-commerce.body":"<p>Desde precios de entrada gigantes a mercados sobresaturados, muchas veces los mercados \"gratis\" hacen que pierdas oportunidades de venta valiosas.</p><p>Son por estas razones por las que tener un mercado privado es tan poderoso: te diferencía enormemente de tus competidores y te permite convertir a más visitantes en clientes.</p>",
+    "services.e-commerce.body":"<p>Un sitio e-Commerce es una tienda en línea privada dónde solo se venden tus productos, lo que te permite evitar competir por la atención de los clientes contra otras marcas, y conduce a convertir a más visitantes en clientes regulares.</p>",
 
     "cta.title": "¿Te interesó alguno?",
     "cta.body-1": "Si es así, entonces puedes",

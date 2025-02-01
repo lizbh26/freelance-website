@@ -37,13 +37,8 @@ export default function ServiceList({ services }: { services: Service[] }) {
                             <h2 className="text-center text-3xl font-bold">
                                 {service.title}
                             </h2>
-                            <h3
-                                className="text-center text-lg italic text-neutral-500"
-                                dangerouslySetInnerHTML={{
-                                    __html: service.tagline,
-                                }}></h3>
                             <h4
-                                className="mb-4 mt-2 text-center text-sm"
+                                className="mb-4 text-center text-lg text-neutral-600"
                                 dangerouslySetInnerHTML={{
                                     __html: service.price_range,
                                 }}></h4>
