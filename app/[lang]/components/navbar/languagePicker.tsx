@@ -43,7 +43,7 @@ export default function LanguagePicker({ lang }: { lang: string }) {
                     }}></span>
             </button>
             <div
-                className={`absolute right-0 mt-6 w-1/2 min-w-44 overflow-hidden bg-white shadow transition-all duration-300 sm:w-1/3 md:-left-12 md:right-auto md:w-auto md:min-w-36 lg:mt-4 ${isOpen ? 'translate-x-0 md:max-h-screen' : 'translate-x-full md:max-h-0 md:translate-x-0'}`}>
+                className={`absolute right-0 mt-10 w-1/2 min-w-44 overflow-hidden bg-white shadow transition-all duration-300 sm:w-1/3 md:-left-12 md:right-auto md:w-auto md:min-w-36 lg:mt-8 ${isOpen ? 'translate-x-0 md:max-h-screen' : 'translate-x-full md:max-h-0 md:translate-x-0'}`}>
                 <h3 className="p-2 text-center text-xl text-primary">
                     {lang == 'en' ? 'Choose language' : 'Cambiar idioma'}
                 </h3>

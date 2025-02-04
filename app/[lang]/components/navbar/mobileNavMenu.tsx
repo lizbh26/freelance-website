@@ -37,7 +37,7 @@ export default function MobileNavigationMenu({
                     __html: feather.icons.menu.toSvg(),
                 }}></button>
             <div
-                className={`absolute left-0 mt-3 h-screen w-screen overflow-hidden shadow backdrop-blur transition-all duration-300 ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}>
+                className={`absolute left-0 mt-8 h-screen w-screen overflow-hidden shadow backdrop-blur transition-all duration-300 ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}>
                 <div
                     ref={menuRef}
                     className={`flex h-full w-3/5 flex-col gap-4 bg-white p-4 px-8 transition delay-200 sm:w-1/2 ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}>

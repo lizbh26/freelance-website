@@ -23,7 +23,7 @@ export default async function Services({ params }: { params: Params }) {
 
     return (
         <main>
-            <header className="flex bg-secondary pb-16 pt-36 md:px-20 lg:px-36">
+            <header className="flex bg-secondary pb-8 pt-48 md:px-20 lg:px-36">
                 <h1 className="w-full text-center text-4xl font-bold text-black">
                     {t('header.title')}
                 </h1>

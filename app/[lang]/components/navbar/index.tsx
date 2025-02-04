@@ -39,12 +39,11 @@ export default function Navbar({
                     className="flex items-center justify-center gap-2 text-xl text-primary"
                     href={`/${lang}`}>
                     <Image
-                        src="/assets/img/logo.png"
+                        src="/assets/img/logo-full.png"
                         alt=""
-                        width={32}
-                        height={32}
+                        width={150}
+                        height={150}
                     />
-                    The Digital Obelisk
                 </a>
                 <div className="flex items-center gap-6">
                     <div className="hidden items-center gap-4 md:flex">
