@@ -5,14 +5,14 @@ export default function HeaderSeparator() {
         <>
             <Image
                 className="w-full overflow-hidden min-[700px]:hidden"
-                src="/assets/header-separator-mobile.png"
+                src="/assets/header/header-separator-mobile.png"
                 alt=""
                 width={800}
                 height={200}
             />
             <Image
                 className="w-full overflow-hidden max-[700px]:hidden"
-                src={`/assets/header-separator.png`}
+                src={`/assets/header/header-separator.png`}
                 alt=""
                 width={1980}
                 height={200}
