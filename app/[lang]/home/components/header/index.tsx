@@ -1,5 +1,6 @@
 import { getTranslations } from '@/app/i18n';
 import HeaderSeparator from './separator';
+import Image from 'next/image';
 
 export default async function Header({ lang }: { lang: string }) {
     const { t } = await getTranslations(lang, 'home');
@@ -19,7 +20,11 @@ export default async function Header({ lang }: { lang: string }) {
                     </a>
                 </div>
                 <div className="mt-4 w-full min-[450px]:w-3/4 sm:w-3/5 md:mt-0 md:w-2/5 lg:w-2/5">
-                    <img src="/assets/header/header-animation.gif" />
+                    <Image
+                        src="/assets/header/header-animation.gif"
+                        alt="Multiple people working together to build a website"
+                        unoptimized
+                    />
                 </div>
             </div>
             <HeaderSeparator />
