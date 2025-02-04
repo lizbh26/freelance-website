@@ -5,6 +5,8 @@ import Link from 'next/link';
 export default async function Services({ lang }: { lang: string }) {
     const { t } = await getTranslations(lang, 'home');
 
+    const links = ['website', 'marketing', 'e-commerce'];
+
     return (
         <section
             id="services"
@@ -14,54 +16,24 @@ export default async function Services({ lang }: { lang: string }) {
                 <p>{t('services.subtitle')}</p>
             </div>
             <div className="mb-5 flex flex-col justify-between gap-6 sm:flex-row">
-                <Link
-                    className="flex w-full flex-col items-center justify-center bg-neutral-200 py-4 transition hover:cursor-pointer hover:bg-neutral-300"
-                    href={{
-                        pathname: `${lang}/services`,
-                        query: { selected: 'website' },
-                    }}>
-                    <Image
-                        src="/assets/img/webpage_icon.png"
-                        alt={t('services.website')}
-                        width={150}
-                        height={150}
-                    />
-                    <h3 className="px-4 text-center text-2xl">
-                        {t('services.website')}
-                    </h3>
-                </Link>
-                <Link
-                    className="flex w-full flex-col items-center justify-center bg-neutral-200 py-4 transition hover:cursor-pointer hover:bg-neutral-300"
-                    href={{
-                        pathname: `${lang}/services`,
-                        query: { selected: 'marketing' },
-                    }}>
-                    <Image
-                        src="/assets/img/advertising.png"
-                        alt={t('services.marketing')}
-                        width={150}
-                        height={150}
-                    />
-                    <h3 className="px-4 text-center text-2xl">
-                        {t('services.marketing')}
-                    </h3>
-                </Link>
-                <Link
-                    className="flex w-full flex-col items-center justify-center bg-neutral-200 py-4 transition hover:cursor-pointer hover:bg-neutral-300"
-                    href={{
-                        pathname: `${lang}/services`,
-                        query: { selected: 'e-commerce' },
-                    }}>
-                    <Image
-                        src="/assets/img/ecommerce.png"
-                        alt={t('services.e-commerce')}
-                        width={150}
-                        height={150}
-                    />
-                    <h3 className="px-4 text-center text-2xl">
-                        {t('services.e-commerce')}
-                    </h3>
-                </Link>
+                {links.map((link) => (
+                    <Link
+                        className="flex w-full flex-col items-center justify-center bg-neutral-200 py-4 transition hover:cursor-pointer hover:bg-secondary"
+                        href={{
+                            pathname: `${lang}/services`,
+                            query: { selected: link },
+                        }}>
+                        <Image
+                            src={`/assets/img/${link}_icon.png`}
+                            alt={t('services.website')}
+                            width={150}
+                            height={150}
+                        />
+                        <h3 className="px-4 text-center text-2xl underline">
+                            {t(`services.${link}`)}
+                        </h3>
+                    </Link>
+                ))}
             </div>
             <div className="text-center">
                 <p>{t('services.and-more')}</p>
