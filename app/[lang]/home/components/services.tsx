@@ -18,6 +18,7 @@ export default async function Services({ lang }: { lang: string }) {
             <div className="mb-5 flex flex-col justify-between gap-6 sm:flex-row">
                 {links.map((link) => (
                     <Link
+                        key={link}
                         className="flex w-full flex-col items-center justify-center bg-neutral-200 py-4 transition hover:cursor-pointer hover:bg-secondary"
                         href={{
                             pathname: `${lang}/services`,
