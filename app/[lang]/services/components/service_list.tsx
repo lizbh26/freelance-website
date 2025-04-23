@@ -9,7 +9,7 @@ export default function ServiceList({ services }: { services: Service[] }) {
                     <section
                         id={service.id}
                         key={service.id}
-                        className={`flex flex-col px-5 py-14 sm:px-16 md:px-20 lg:px-36 ${i % 2 == 0 ? '' : 'bg-gray-100'}`}>
+                        className={`flex scroll-mt-14 flex-col px-5 py-14 sm:px-16 md:px-20 lg:px-36 ${i % 2 == 0 ? '' : 'bg-gray-100'}`}>
                         <div
                             className={`flex flex-col items-center ${i % 2 == 0 ? 'sm:flex-row' : 'sm:flex-row-reverse'}`}>
                             <Image
