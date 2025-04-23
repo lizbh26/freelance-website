@@ -22,6 +22,8 @@ export default async function Header({ lang }: { lang: string }) {
                 <div className="mt-4 w-full min-[450px]:w-3/4 sm:w-3/5 md:mt-0 md:w-2/5 lg:w-2/5">
                     <Image
                         src="/assets/header/header-animation.gif"
+                        width={500}
+                        height={400}
                         alt="Multiple people working together to build a website"
                         unoptimized
                     />
