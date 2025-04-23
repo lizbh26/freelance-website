@@ -24,7 +24,7 @@
     "services.social-media.title": "Administración de redes sociales",
     "services.social-media.price-range": "$400 - $1500 MXN por perfil por mes",
     "services.social-media.option": "Redes sociales",
-    "services.social-media.body": "<span><p>Con una buena presencia en redes sociales, puedes asegurar que las personas piensen en tí cuando necesiten comprar algo, en vez de tu competencia. Nuestros servicios incluyen:</p> <ul class='list-disc list-inside'><li>Planeación de estrategias publicitarias que impulsen la presencia de la marca.</li><li>Creación de contenido gráfico y textual.</li><li>Representación de la marca en mensajes y comentarios.</li></ul></span>",
+    "services.social-media.body": "<span><p>Con una buena presencia en redes sociales, puedes asegurar que las personas piensen en tí cuando necesiten comprar algo, en vez de tu competencia.</p><p class='mt-5'> Nuestros servicios incluyen:</p> <ul style='list-style: inside;'><li>Planeación de estrategias publicitarias que impulsen la presencia de la marca.</li><li>Creación de contenido gráfico y textual.</li><li>Representación de la marca en mensajes y comentarios.</li></ul></span>",
 
     "services.e-commerce.title": "Soluciones e-Commerce privadas",
     "services.e-commerce.price-range": "$5,000 - $15,000 MXN",

@@ -20,17 +20,14 @@ export default async function Services({ lang }: { lang: string }) {
                     <Link
                         key={link}
                         className="flex w-full flex-col items-center justify-center bg-neutral-200 py-4 transition hover:cursor-pointer hover:bg-secondary"
-                        href={{
-                            pathname: `${lang}/services`,
-                            query: { selected: link },
-                        }}>
+                        href={`${lang}/services#${link}`}>
                         <Image
-                            src={`/assets/img/${link}_icon.png`}
-                            alt={t('services.website')}
+                            src={`/assets/img/service_${link}.png`}
+                            alt={t(`services.${link}`)}
                             width={150}
                             height={150}
                         />
-                        <h3 className="px-4 text-center text-2xl underline">
+                        <h3 className="px-4 pt-4 text-center text-2xl underline">
                             {t(`services.${link}`)}
                         </h3>
                     </Link>
@@ -50,7 +47,7 @@ export default async function Services({ lang }: { lang: string }) {
                     {t('services.pre-link')}{' '}
                     <a
                         className="text-primary underline transition hover:text-primary md:text-black"
-                        href={`/${lang}/services?selected=website`}>
+                        href={`/${lang}/services`}>
                         {t('services.link')}
                     </a>
                 </p>

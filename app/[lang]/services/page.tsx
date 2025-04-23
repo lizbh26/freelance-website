@@ -23,16 +23,16 @@ export default async function Services({ params }: { params: Params }) {
 
     return (
         <main>
-            <header className="flex bg-secondary pb-8 pt-48 md:px-20 lg:px-36">
+            <header className="flex bg-secondary pb-16 pt-36 md:px-20 lg:px-36">
                 <h1 className="w-full text-center text-4xl font-bold text-black">
                     {t('header.title')}
                 </h1>
             </header>
-            <article className="px-5 py-10 sm:px-16 md:px-20 lg:px-36">
+            <article className="">
                 <Suspense>
                     <ServiceList services={getAllServices(t)} />
                 </Suspense>
-                <section className="mt-12 text-center">
+                <section className="px-5 py-12 text-center sm:px-16 md:px-20 lg:px-36">
                     <h2 className="text-2xl font-bold">{t('cta.title')}</h2>
                     <p>
                         {t('cta.body-1')}{' '}
