@@ -32,7 +32,7 @@ export default function Navbar({
     });
     return (
         <nav
-            className={`fixed z-20 w-full bg-white px-5 py-3 text-black shadow transition sm:px-10 md:px-10 min-[840px]:px-20 lg:px-36 ${isShowing ? '-translate-y-0' : '-translate-y-full'}`}>
+            className={`fixed z-20 w-full bg-white px-5 py-3 text-black shadow-sm transition sm:px-10 md:px-10 min-[840px]:px-20 lg:px-36 ${isShowing ? '-translate-y-0' : '-translate-y-full'}`}>
             <div className="flex w-full items-center justify-between">
                 <MobileNavigationMenu lang={lang} links={links} />
                 <a

@@ -15,7 +15,7 @@ export default async function Header({ lang }: { lang: string }) {
                     <p>{t('header.subtitle')}</p>
                     <a
                         href={`/${lang}/contact`}
-                        className="mt-8 inline-block rounded bg-primary px-5 py-2 text-xl font-bold text-white transition hover:scale-105">
+                        className="mt-8 inline-block rounded-sm bg-primary px-5 py-2 text-xl font-bold text-white transition hover:scale-105">
                         {t('header.cta')} →
                     </a>
                 </div>

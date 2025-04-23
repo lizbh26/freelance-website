@@ -117,7 +117,7 @@ export default function ContactForm({ fields }: { fields: FieldNames }) {
                     id="email"
                     ref={emailInput}
                     required
-                    className="border-b-2 border-black px-2 outline-none"
+                    className="border-b-2 border-black px-2 outline-hidden"
                 />
             </div>
             <div className="my-6 flex flex-col">
@@ -129,7 +129,7 @@ export default function ContactForm({ fields }: { fields: FieldNames }) {
                     id="name"
                     ref={nameInput}
                     required
-                    className="border-b-2 border-black px-2 outline-none"
+                    className="border-b-2 border-black px-2 outline-hidden"
                 />
             </div>
             <div className="my-3 flex flex-col">
@@ -140,7 +140,7 @@ export default function ContactForm({ fields }: { fields: FieldNames }) {
                     rows={5}
                     id="description"
                     ref={descriptionInput}
-                    className="rounded border-2 border-black px-2 py-1 outline-none"
+                    className="rounded-sm border-2 border-black px-2 py-1 outline-hidden"
                 />
             </div>
             <div className="my-6 flex items-center justify-center gap-4">
@@ -156,7 +156,7 @@ export default function ContactForm({ fields }: { fields: FieldNames }) {
                     disabled={!recaptchaToken || submitStatus == 'sent'}
                     onMouseEnter={() => setLoadingSpinnerColor('white')}
                     onMouseLeave={() => setLoadingSpinnerColor('black')}
-                    className="flex items-center justify-center gap-2 rounded border-4 border-primary bg-primary px-5 py-2 font-bold text-white transition hover:scale-105 hover:bg-primary hover:text-white disabled:cursor-not-allowed disabled:border-gray-800 disabled:bg-gray-800 disabled:hover:scale-100 disabled:hover:bg-gray-800 md:bg-white md:text-black md:disabled:bg-white">
+                    className="flex items-center justify-center gap-2 rounded-sm border-4 border-primary bg-primary px-5 py-2 font-bold text-white transition hover:scale-105 hover:bg-primary hover:text-white disabled:cursor-not-allowed disabled:border-gray-800 disabled:bg-gray-800 disabled:hover:scale-100 disabled:hover:bg-gray-800 md:bg-white md:text-black md:disabled:bg-white">
                     {submitStatus == 'sent'
                         ? fields.button_sent
                         : fields.button_waiting}{' '}

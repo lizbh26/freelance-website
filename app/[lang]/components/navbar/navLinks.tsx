@@ -41,7 +41,7 @@ export default function NavigationLinks({
                 href={`/${lang}/testimonials`}>
             </a> */}
             <a
-                className="rounded bg-primary px-3 py-2 text-center font-bold text-white transition hover:scale-105 md:mx-3"
+                className="rounded-sm bg-primary px-3 py-2 text-center font-bold text-white transition hover:scale-105 md:mx-3"
                 href={`/${lang}/contact`}>
                 {links.cta_1}{' '}
                 <br className="min-[410px]:hidden md:block min-[900px]:hidden" />{' '}

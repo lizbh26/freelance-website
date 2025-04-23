@@ -39,7 +39,7 @@ export default async function Services({ lang }: { lang: string }) {
                     <p>{t('services.pre-cta')}</p>
                     <a
                         href={`/${lang}/contact`}
-                        className="rounded bg-primary p-2 px-4 font-bold text-white transition hover:scale-105">
+                        className="rounded-sm bg-primary p-2 px-4 font-bold text-white transition hover:scale-105">
                         {t('services.cta')}
                     </a>
                 </div>
